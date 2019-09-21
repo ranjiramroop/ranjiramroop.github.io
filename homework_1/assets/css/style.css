@@ -1,0 +1,240 @@
+header {
+    width: 100%;
+    height: 90px;
+    margin-bottom: 40px;
+    top: 0;
+    left:0;
+    background-color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;   
+}
+
+.topright {
+    float: right;
+    top: 0px;
+    right: 10px;
+    bottom: 10px;
+    left: 700px;
+    width: 255px;
+    padding: 20px;
+    height:90px;
+    text-align: center;
+    display: inline;
+}
+
+ul {
+    list-style-type: none;
+    font-family: inherit;
+}
+
+li {
+    font-size: 18px;
+    background-color: whitesmoke;
+}
+
+a {
+    text-decoration: none;
+}
+
+.about{   
+    padding:10px;
+    border:1px; 
+    border-style: solid;
+    border-top: none;
+    border-right: solid lightgray auto;
+    border-bottom: none;
+    border-left: none;
+    color: #7c7786; 
+}
+
+.portfolio {
+    padding:10px;
+    border:1px; 
+    border-style: solid;
+    border-top: none;
+    border-right: solid lightgray auto;
+    border-bottom: none;
+    border-left: none;
+    color: #7c7786;
+}
+
+.contact{
+    padding:10px;
+    border:4px; 
+    color: #7c7786;
+}
+
+.myname {
+    float: left;
+    width: 250px;
+    padding: 27.5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: #64a8a4
+}
+.headwrap {
+    width:960px;
+    margin: 0 auto;
+}
+body {
+        background-color: #E5E5E5;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    
+    } 
+.page-container {
+    min-height: 100vh;
+    position: relative;
+    width:100%;   
+}
+
+.wrapit {
+    padding-bottom:50px;
+}
+.container {
+    width: 960px;
+    background-color: whitesmoke;
+    font-family: inherit;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h2{ 
+    width: 920px;
+    height: 55px;
+    background-color:whitesmoke;
+    font-family: inherit;
+    font-weight: 500px;
+    font-size: 35px;
+    color: #64a8a4;
+    padding: 10px 10px 5px 27.5px;
+    border:10px; 
+    border-style: solid;
+    border-top: none;
+    border-right:none;
+    border-bottom: solid lightgray;
+    border-left:none;
+}
+.myimage {
+    height: 475px;
+    width: 316px;
+    left: 30px;
+    bottom: 0;
+}
+
+.divimage {
+    width:370px;
+    height: 520px;
+    float:left;
+}
+
+p {
+    font-family: inherit;
+    font-size: 20px;
+    color: gray;
+    background-color: whitesmoke;
+    float:left 40%;
+    letter-spacing: 1.25px;
+    line-height: 175%;
+    padding: 15.5px;
+}
+
+.foot {
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #7c7786;
+    color: white;
+    text-align: center;
+    border-top: 15px solid #64a8a4;
+    position: absolute;
+    font-family: inherit;
+
+}
+
+h3 {
+    width: 300px;
+    color: whitesmoke;
+    padding: 10px 0;
+    background-color: #64a8a4;
+    margin-top: 150px;
+    text-align: center
+
+}
+
+#float1, #float2, #float3, #float4, #float5 {
+    width: 300px;
+    height: 200px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: red;
+    float:left;
+}
+#float3 {
+    margin-right:0;
+}
+
+#float1 {
+    background-image: url(../images/playing-video-games-clipart-12.jpg);
+    background-size: 300px;
+    background-position: 0px -50px;
+}
+#float2 {
+    background-image: url(../images/playing-video-games-clipart-21.jpg);
+    background-size: 300px;
+    background-position: 40px -50px;
+}
+#float3 {
+    background-image: url(../images/playing-video-games-clipart-49.jpg);
+    background-size: 380px;
+    background-position: 6px -10px;
+}
+#float4 {
+    background-image: url(../images/playing-video-games-clipart-50.jpg);
+    background-size: 260px;
+    background-position: 6px -10px;
+}
+#float5 {
+    background-image: url(../images/playing-video-games-clipart-21.jpg);
+    background-size: 300px;
+    background-position: 40px -50px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.name, .mail, .msg {
+    width: 950px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.msg {
+    height: 200px;
+}
+label {
+    font-family: inherit;
+    color: #7c7786
+}  
+
+button {
+    background-color: #64a8a4;
+    font-family: inherit;
+    height: 50px;
+    width: 150px;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+
+
+/*i will need to use a z-index to get the text box to land on top of the image*/
