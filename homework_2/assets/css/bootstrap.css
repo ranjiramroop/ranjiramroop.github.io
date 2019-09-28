@@ -47,16 +47,22 @@ h2 {
   padding:10px;
   padding-bottom:0px;
 }
+.card-deck {
+  padding:10px;
+}
 .card {
   padding: 10px;
-  height: 75vh;
 }
-
+.cardimage {
+  width: 70%;
+  height: auto;
+  align-content: center;
+}
 .card-title {
 background-color: #4aaaa5;
 color: #ffffff;
+text-align: center;
 }
-
 .card-text {
   text-align: center; 
 }
@@ -86,6 +92,9 @@ form {
   .container-fluid {
   /* Box-model */
   width: 100%;
+}
+.card{
+  padding: 10px;
 }
 }
 /* // Medium devices (tablets, less than 992px) */
