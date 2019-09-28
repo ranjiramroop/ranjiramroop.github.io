@@ -1,0 +1,88 @@
+body {
+  background-image: url(../images/stitched_wool/stitched_wool.png);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+} 
+h1 {
+  float: left;
+  background-color: #4aaaa5;
+  color: #ffffff;
+}
+header {
+  width: 100%;
+  height: 100px;
+}
+.bs-container {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  background-color: #ffffff;
+}
+.headspan {
+  color: #ffffff;
+  height: 7vh;
+}
+.img-fluid{
+ 
+}
+.container {
+  padding: 15px;
+}
+.body-wrap {
+  background-color: #ffffff;
+  color: #777777;
+}
+.card {
+  padding: 10px;
+  height: 75vh;
+}
+
+.card-title {
+background-color: #4aaaa5;
+color: #ffffff;
+}
+
+.card-text {
+  text-align: center; 
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (min-width: 576px) { 
+  .container-fluid {
+  /* Box-model */
+  width: 100%;
+}
+}
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 768px) { 
+  .container-fluid {
+  /* Box-model */
+  width: 100%;
+}
+}
+/* // Medium devices (tablets, less than 992px) */
+@media (min-width: 992px) { 
+  .container-fluid {
+  /* Box-model */
+  width: 100%;
+}
+}
+/* // Large devices (desktops, less than 1200px) */
+@media (min-width: 1200px) { 
+  .container-fluid {
+  /* Box-model */
+  width: 100%;
+} 
+}
