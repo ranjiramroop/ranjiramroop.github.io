@@ -43,6 +43,10 @@ padding: 10px;
   background-color: #ffffff;
   color: #777777;
 }
+h2 {
+  padding:10px;
+  padding-bottom:0px;
+}
 .card {
   padding: 10px;
   height: 75vh;
@@ -60,9 +64,12 @@ color: #ffffff;
 #sticky-footer {
   flex-shrink: none;
 }
-
-button {
-  margin-bottom: 10px;
+form {
+  padding:10px;
+}
+.submit {
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 /* Extra small devices (portrait phones, less than 576px)*/
