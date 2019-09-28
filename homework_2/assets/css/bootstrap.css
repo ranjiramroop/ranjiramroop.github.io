@@ -8,6 +8,7 @@ h1 {
   float: left;
   background-color: #4aaaa5;
   color: #ffffff;
+  height:100%;
 }
 header {
   width: 100%;
@@ -18,16 +19,22 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-content: space-between;
 }
 .navbar {
   background-color: #ffffff;
 }
 .headspan {
   color: #ffffff;
-  height: 7vh;
+  height: 100%;
 }
 .img-fluid{
- 
+max-width: 45%;
+height: auto; 
+padding: 10px;
+}
+.media-body {
+  padding:10px;
 }
 .container {
   padding: 15px;
@@ -59,28 +66,30 @@ button {
 }
 
 /* Extra small devices (portrait phones, less than 576px)*/
-@media (min-width: 576px) { 
+@media (max-width: 576px) { 
   .container-fluid {
   /* Box-model */
   width: 100%;
 }
+  h1 {width: 100%;
+}
 }
 /* Small devices (landscape phones, less than 768px) */
-@media (min-width: 768px) { 
+@media (max-width: 768px) { 
   .container-fluid {
   /* Box-model */
   width: 100%;
 }
 }
 /* // Medium devices (tablets, less than 992px) */
-@media (min-width: 992px) { 
+@media (max-width: 992px) { 
   .container-fluid {
   /* Box-model */
   width: 100%;
 }
 }
 /* // Large devices (desktops, less than 1200px) */
-@media (min-width: 1200px) { 
+@media (max-width: 1200px) { 
   .container-fluid {
   /* Box-model */
   width: 100%;
