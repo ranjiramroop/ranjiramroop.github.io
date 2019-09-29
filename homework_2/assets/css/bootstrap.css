@@ -108,12 +108,24 @@ form {
 .list a {
   align-content: center !important;
 }
+.card-deck {
+  padding:10px !important;
+}
+.card {
+  padding: 10px!important;
+}
 }
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) { 
   .container-fluid {
   /* Box-model */
   width: 100%;
+}
+.card-deck {
+  padding:10px !important;
+}
+.card {
+  padding: 10px !important;
 }
 }
 /* // Medium devices (tablets, less than 992px) */
@@ -122,6 +134,12 @@ form {
   /* Box-model */
   width: 100%;
 }
+.card-deck {
+  padding:10px !important;
+}
+.card {
+  padding: 10px !important;
+}
 }
 /* // Large devices (desktops, less than 1200px) */
 @media (max-width: 1200px) { 
@@ -129,4 +147,10 @@ form {
   /* Box-model */
   width: 100%;
 } 
+.card-deck {
+  padding:10px !important;
+}
+.card {
+  padding: 10px !important;
+}
 }
