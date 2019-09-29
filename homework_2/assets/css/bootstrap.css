@@ -36,9 +36,14 @@ header {
 .list a {
  color: #777777;
  align-content: center;
- border-right: solid 1px #cecbcb;
- 
 }
+.nav-item-1{
+  border-right: solid 0.5px #cecbcb;
+}
+.nav-item-2 {
+  border-right: solid 0.5px #cecbcb;
+}
+ 
 .img-fluid{
 max-width: 45%;
 height: auto; 
