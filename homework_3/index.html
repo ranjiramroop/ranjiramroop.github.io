@@ -26,69 +26,64 @@
             <br>
             <div class="form-container">
               <form id=form action="INSERT URL HERE" method="GET">
-                  <div class="criteria1-container"> 
-                    <p class="criteria1"> 1.) A password must be <em> at least <strong> 8</strong> characters</em>, and <em>no longer than <strong>128 </strong>characters</em>.<br>
-                      How many characters will your password be? <br> 
-                      Enter a <strong>digit</strong> between 8 and 128 for your password length in the box below, and press <em>Confirm</em>. <br>
-                      <input id="boxnumber" type="text" name="enternumber" placeholder="Password # length?" maxlength="3" required="required" />
+                <div class="criteria1-container"> 
+                  <p class="criteria1"> 1.) A password must be <em> at least <strong> 8</strong> characters</em>, and <em>no longer than <strong>128 </strong>characters</em>.<br>
+                    How many characters will your password be? <br> 
+                    Enter a <strong>digit</strong> between 8 and 128 for your password length in the box below, and press <em>Confirm</em>. <br>
+                    <input id="boxnumber" type="text" name="enternumber" placeholder="Password # length?" maxlength="3" required="required" />
                       <button id="confirmnumber" alt="Confirm">
                         Confirm
                       </button>
-                    </p>
+                  </p>
+                </div>
+                <br>
+                <div class="criteria2-container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="criteria2"> 2.) Please specify if you would like your password to include the following:</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="radio" name="UpperCase" value="yes"> Yes, include <strong>Upper Case Letters</strong>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="radio" name="UpperCase" value="no"> No, DO NOT include <strong>Upper Case Letters</strong>
+                    </div>
                   </div>
                   <br>
-                  <div class="criteria2-container">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <p class="criteria2"> 2.) Please specify if you would like your password to include the following:</p>
-                      </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="radio" name="LowerCase" value="yes"> Yes, include <strong>Lower Case Letters</strong>
                     </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <input type="radio" name="UpperCase" value="yes"> Yes, include Upper Case Letters
-                      </div>
-                      <div class="col-md-6">
-                        <input type="radio" name="UpperCase" value="no"> No, DO NOT include Upper Case Letters
-                      </div>
+                    <div class="col-md-6">
+                      <input type="radio" name="LowerCase" value="no"> No, DO NOT include <strong>Lower Case Letters</strong>
                     </div>
-
-                      <br>
-                      <br>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <input type="radio" name="LowerCase" value="yes"> Yes, include Lower Case Letters
-                        </div>
-                        <div class="col-md-6">
-                          <input type="radio" name="LowerCase" value="no"> No, DO NOT include Lower Case Letters
-                        </div>
-                      </div>
-
-                      <br>
-                      <br>
-                      <div class="row">
-                        <div class="col-md-6">  
-                          <input type="radio" name="Numeric" value="yes"> Yes, include Numbers
-                        </div>
-                        <div class="col-md-6">  
-                        <input type="radio" name="Numeric" value="no"> No, DO NOT include Numbers
-                        </div>
-                      </div>
-
-                      <br>
-                      <br>
-                      <div class="row">
-                          <div class="col-md-6">    
-                      <input type="radio" name="Symbol" value="yes"> Yes, include Special Characters (Symbols)
-                        </div>
-                        <div class="col-md-6">    
-                      <input type="radio" name="Symbol" value="no"> No, DO NOT include Special Characters (Symbols)
-                        </div>
-                      </div>
-
-                      <br>
-                      <br>
                   </div>
-                  </form>
+                  <br>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6">  
+                      <input type="radio" name="Numeric" value="yes"> Yes, include <strong>Numbers</strong>
+                    </div>
+                    <div class="col-md-6">  
+                      <input type="radio" name="Numeric" value="no"> No, DO NOT include <strong>Numbers</strong>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6">    
+                      <input type="radio" name="Symbol" value="yes"> Yes, include <strong>Special Characters (Symbols)</strong>
+                    </div>
+                    <div class="col-md-6">    
+                      <input type="radio" name="Symbol" value="no"> No, DO NOT include <strong>Special Characters (Symbols)</strong>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                </div>
                 </form>
                   <textarea
                     readonly
