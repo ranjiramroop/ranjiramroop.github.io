@@ -27,14 +27,16 @@
             <div class="form-container">
               <form id=form action="INSERT URL HERE" method="GET">
                 <div class="criteria1-container"> 
-                  <p class="criteria1"> 1.) A password must be <em> at least <strong> 8</strong> characters</em>, and <em>no longer than <strong>128 </strong>characters</em>.<br>
-                    How many characters will your password be? <br> 
-                    Enter a <strong>digit</strong> between 8 and 128 for your password length in the box below, and press <em>Confirm</em>. <br>
-                    <input id="boxnumber" type="text" name="enternumber" placeholder="Password # length?" maxlength="3" required="required" />
-                      <button id="confirmnumber" alt="Confirm">
-                        Confirm
-                      </button>
-                  </p>
+                  <h6 class="criteria1"> 1.) A password must be <em> at least <strong> 8</strong> characters</em>, and <em>not longer than <strong>128 </strong>characters</em>. 
+                    How many characters will your password be?
+                  </h6>
+                  <br> 
+                    <p>Enter a <strong>digit</strong> between 8 and 128 for your password length in the box below, and press <em>Confirm</em>. <br>
+                      <input id="boxnumber" type="text" name="enternumber" placeholder="Password # length?" maxlength="3" required="required" />
+                        <button id="confirmnumber" alt="Confirm">
+                          Confirm
+                        </button>
+                    </p>
                 </div>
                 <br>
                 <div class="criteria2-container">
@@ -45,7 +47,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                      <input type="radio" name="UpperCase" value="yes"> Yes, include <strong>Upper Case Letters</strong>
+                      <input class=yes type="radio" name="UpperCase" value="yes"> Yes, include <strong>Upper Case Letters</strong>
                     </div>
                     <div class="col-md-6">
                       <input type="radio" name="UpperCase" value="no"> No, DO NOT include <strong>Upper Case Letters</strong>
