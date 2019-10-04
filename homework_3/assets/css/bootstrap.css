@@ -1,0 +1,23 @@
+
+.navbar {
+    background-color: rgb(57, 39, 88);
+    padding: 0px !important;
+    color: #777777;
+  }
+  
+  .headspan {
+    color: #ffffff;
+    height: 100%;
+    padding-left: 30px;
+  }
+.bs-container {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+
+#sticky-footer {
+    flex-shrink: none;
+  }
