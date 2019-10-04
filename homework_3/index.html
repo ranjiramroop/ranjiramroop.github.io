@@ -22,29 +22,88 @@
           <div class="container">
             <h2 class="jumboheader">Generate a Password</h2>
             <hr />
-              <h4 class="intro">Let's help you create a unique password!</h4>
-                <form id=form action="INSERT URL HERE" method="GET">
-                  <p class="criteria1"> 1.) A password must be <em> at least <strong> 8</strong> characters</em>, and <em>no longer than <strong>128 </strong>characters</em>.<br>
-                  How many characters will your password be? <br> 
-                  Enter a digit between 8 and 128 for your password length in the box below. <br>
-                    <input id="boxnumber" type="text" name="enternumber" placeholder="Password # length?" maxlength="3" required="required" />
-                    <button id="confirmnumber" alt="Confirm">
-                      Confirm
-                    </button>
-                  </p>
+            <h4 class="intro">Let's create a unique password!</h4>
+            <br>
+            <div class="form-container">
+              <form id=form action="INSERT URL HERE" method="GET">
+                  <div class="criteria1-container"> 
+                    <p class="criteria1"> 1.) A password must be <em> at least <strong> 8</strong> characters</em>, and <em>no longer than <strong>128 </strong>characters</em>.<br>
+                      How many characters will your password be? <br> 
+                      Enter a <strong>digit</strong> between 8 and 128 for your password length in the box below, and press <em>Confirm</em>. <br>
+                      <input id="boxnumber" type="text" name="enternumber" placeholder="Password # length?" maxlength="3" required="required" />
+                      <button id="confirmnumber" alt="Confirm">
+                        Confirm
+                      </button>
+                    </p>
+                  </div>
+                  <br>
+                  <div class="criteria2-container">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <p class="criteria2"> 2.) Please specify if you would like your password to include the following:</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input type="radio" name="UpperCase" value="yes"> Yes, include Upper Case Letters
+                      </div>
+                      <div class="col-md-6">
+                        <input type="radio" name="UpperCase" value="no"> No, DO NOT include Upper Case Letters
+                      </div>
+                    </div>
+
+                      <br>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <input type="radio" name="LowerCase" value="yes"> Yes, include Lower Case Letters
+                        </div>
+                        <div class="col-md-6">
+                          <input type="radio" name="LowerCase" value="no"> No, DO NOT include Lower Case Letters
+                        </div>
+                      </div>
+
+                      <br>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">  
+                          <input type="radio" name="Numeric" value="yes"> Yes, include Numbers
+                        </div>
+                        <div class="col-md-6">  
+                        <input type="radio" name="Numeric" value="no"> No, DO NOT include Numbers
+                        </div>
+                      </div>
+
+                      <br>
+                      <br>
+                      <div class="row">
+                          <div class="col-md-6">    
+                      <input type="radio" name="Symbol" value="yes"> Yes, include Special Characters (Symbols)
+                        </div>
+                        <div class="col-md-6">    
+                      <input type="radio" name="Symbol" value="no"> No, DO NOT include Special Characters (Symbols)
+                        </div>
+                      </div>
+
+                      <br>
+                      <br>
+                  </div>
+                  </form>
                 </form>
-                <textarea
-                  readonly
-                  id="password"
-                    placeholder="Your Secure Password"
-                      aria-label="Generated Password"
-                      ></textarea>
-                  <button id="btngenerate">
-                    Generate Password
-                  </button>
-                  <button id="btncopy">
-                    Copy to Clipboard
-                  </button>
+                  <textarea
+                    readonly
+                    id="password"
+                      placeholder="Your Secure Password"
+                        aria-label="Generated Password"
+                        ></textarea>
+                    <button id="btngenerate">
+                      Generate Password
+                    </button>
+                    <button id="btncopy">
+                      Copy to Clipboard
+                    </button>
+                
+                </div>
           </div>
         </div>
         <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
