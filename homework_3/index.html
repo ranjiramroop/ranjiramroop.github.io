@@ -12,39 +12,39 @@
   <body>
     <div class="bs-container">
       <header>
-          <nav class="navbar">
-            <div class="headspan"> 
-              <h1>Unique Password Generator</h1> 
-            </div>
-          </nav>
+        <nav class="navbar">
+          <div class="headspan"> 
+            <h1>Unique Password Generator</h1> 
+          </div>
+        </nav>
       </header>
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <h2 class="jumboheader">Generate a Password</h2>
-            <hr />
-            <h4 class="intro">Let's create a unique password!</h4>
-            <br>
-            <div class="form-container">
-              <form id=form action="INSERT URL HERE" method="GET">
-                <div class="criteria1-container"> 
-                  <h6 class="criteria1"> 1.) A password must be <em> at least <strong> 8</strong> characters</em>, and <em>not longer than <strong>128 </strong>characters</em>. 
-                    How many characters will your password be?
-                  </h6>
-                  <br> 
-                    <p>Enter a <strong>digit</strong> between 8 and 128 for your password length in the box below, and press <em>Confirm</em>. <br>
-                      <input id="boxnumber" type="text" name="enternumber" placeholder="Password # Length?" maxlength="3" required="required" />
-                        <button id="confirmnumber" alt="Confirm">
-                          Confirm
-                        </button>
-                    </p>
-                </div>
-                <br>
-                <div class="criteria2-container">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <p class="criteria2"> 2.) Please specify if you would like your password to include <strong>Upper Case Letters</strong>:</p>
-                    </div>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h2 class="jumboheader">Generate a Password</h2>
+        <hr />
+          <h4 class="intro">Let's create a unique password!</h4>
+          <br>
+          <div class="form-container">
+            <form id=form action="INSERT URL HERE" method="GET">
+              <div class="criteria1-container"> 
+                <h6 class="criteria1"> 1.) A password must be <em> at least <strong> 8</strong> characters</em>, and <em>not longer than <strong>128 </strong>characters</em>. 
+                How many characters will your password be?
+                </h6>
+                <br> 
+                <p>Enter a <strong>digit</strong> between 8 and 128 for your password length in the box below, and press <em>Confirm</em>. <br>
+                <input id="boxnumber" type="text" name="enternumber" placeholder="Password # Length?" maxlength="3" required="required" />
+                <button id="confirmnumber" alt="Confirm">
+                Confirm
+                </button>
+                </p>
+              </div>
+              <br>
+              <div class="criteria2-container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="criteria2"> 2.) Please specify if you would like your password to include <strong>Upper Case Letters</strong>:</p>
                   </div>
+                </div>
                   <div class=first-wrap>
                     <div class="row">
                       <div class="col-md-12">            
@@ -64,37 +64,77 @@
                   <br>
                   <br>
                   <div class="row">
-                    <div class="col-md-6">
-                      <input type="radio" name="LowerCase" value="yes"> Yes, include <strong>Lower Case Letters</strong>
+                    <div class="col-md-12">
+                      <p class="criteria3"> 3.) Please specify if you would like your password to include <strong>Lower Case Letters</strong>:</p>
                     </div>
-                    <div class="col-md-6">
-                      <input type="radio" name="LowerCase" value="no"> No, DO NOT include <strong>Lower Case Letters</strong>
+                  </div>
+                  <div class=second-wrap>
+                    <div class="row">
+                      <div class="col-md-12">            
+                        <div class="radio-toolbarsecond"> 
+                          <div class="radio-toolbar3">
+                            <input type="radio" id="radioYesL" name="radioLower" value="yes">
+                            <label for="radioYesL">Yes</label>
+                          </div>
+                          <div class="radio-toolbar4">
+                            <input type="radio" id="radioNoL" name="radioLower" value="no">
+                            <label for="radioNoL">No</label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <br>
-                  <br>
+                  <br>  
                   <div class="row">
-                    <div class="col-md-6">  
-                      <input type="radio" name="Numeric" value="yes"> Yes, include <strong>Numbers</strong>
+                    <div class="col-md-12">
+                      <p class="criteria4"> 4.) Please specify if you would like your password to include <strong>Numbers</strong>:</p>
                     </div>
-                    <div class="col-md-6">  
-                      <input type="radio" name="Numeric" value="no"> No, DO NOT include <strong>Numbers</strong>
+                  </div>
+                  <div class=third-wrap>
+                    <div class="row">
+                      <div class="col-md-12">            
+                        <div class="radio-toolbarthird"> 
+                          <div class="radio-toolbar5">
+                            <input type="radio" id="radioYesNum" name="radioNumber" value="yes">
+                            <label for="radioYesNum">Yes</label>
+                          </div>
+                          <div class="radio-toolbar6">
+                            <input type="radio" id="radioNoNum" name="radioNumber" value="no">
+                            <label for="radioNoNum">No</label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <br>
-                  <br>
+                  <br>  
                   <div class="row">
-                    <div class="col-md-6">    
-                      <input type="radio" name="Symbol" value="yes"> Yes, include <strong>Special Characters (Symbols)</strong>
-                    </div>
-                    <div class="col-md-6">    
-                      <input type="radio" name="Symbol" value="no"> No, DO NOT include <strong>Special Characters (Symbols)</strong>
+                    <div class="col-md-12">
+                      <p class="criteria5"> 5.) Please specify if you would like your password to include <strong>Special Characters</strong>:</p>
                     </div>
                   </div>
-                  <br>
-                  <br>
+                  <div class=fourth-wrap>
+                    <div class="row">
+                      <div class="col-md-12">            
+                        <div class="radio-toolbarfourth"> 
+                          <div class="radio-toolbar7">
+                            <input type="radio" id="radioYesSym" name="radioSymbol" value="yes">
+                            <label for="radioYesSym">Yes</label>
+                          </div>
+                          <div class="radio-toolbar8">
+                            <input type="radio" id="radioNoSym" name="radioSymbol" value="no">
+                            <label for="radioNoSym">No</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                </form>
+                <br>
+                <br> 
+            </form>
+          </div> 
                   <textarea
                     readonly
                     id="password"
@@ -108,9 +148,9 @@
                       Copy to Clipboard
                     </button>
                 
-                </div>
-          </div>
         </div>
+      </div> <!--jumbotron closing div-->
+    </div>
         <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
             <div class="container text-center">
               <div class="row">
@@ -124,3 +164,8 @@
       </div> 
   </body>
 </html>
+
+
+<!--https://jsfiddle.net/markheath/azk2cL45/1 
+that is where i go the code from with the radio buttons-->
+
