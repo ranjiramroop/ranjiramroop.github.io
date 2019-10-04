@@ -23,8 +23,16 @@
             <h2 class="jumboheader">Generate a Password</h2>
             <hr />
               <h4 class="intro">Let's help you create a unique password!</h4>
-                <p class="criteria1"> A password must be at least 8 characters, and no longer than 128 characters. <br>
-                How many characters will your password be? </p>
+                <form id=form action="INSERT URL HERE" method="GET">
+                  <p class="criteria1"> 1.) A password must be <em> at least <strong> 8</strong> characters</em>, and <em>no longer than <strong>128 </strong>characters</em>.<br>
+                  How many characters will your password be? <br> 
+                  Enter a digit between 8 and 128 for your password length in the box below. <br>
+                    <input id="boxnumber" type="text" name="enternumber" placeholder="Password # length?" maxlength="3" required="required" />
+                    <button id="confirmnumber" alt="Confirm">
+                      Confirm
+                    </button>
+                  </p>
+                </form>
                 <textarea
                   readonly
                   id="password"
