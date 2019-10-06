@@ -164,8 +164,11 @@ btngenerate.addEventListener("click",function(event){
       while (password.length < quantityCharacter.value) {
         password += loadInfo[Math.floor(Math.random() * loadInfo.length)];
       }
-      console.log(loadInfo)
      document.getElementById("outputPassword").value = password;
+
+     btncopy.addEventListener("click",function(){
+       document.getElementById("outputPassword").select();
+       document.execCommand("copy");
+      });
     }
-    )
-    ;
+)
