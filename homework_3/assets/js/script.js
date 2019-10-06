@@ -73,7 +73,7 @@ function checkRadio()
   console.log(radioNoSym.checked);
 }
 
-// //This function checks and logs values
+//This function checks and logs values which is used on the quantityCharacter.
 function checkVal() {
   console.log(quantityCharacter.value)
 }
@@ -84,8 +84,8 @@ btngenerate.addEventListener("click",function(event){
   checkVal();
   //each time the button is clicked, the old variables are replaced with the new.
 
-  var loadInfo = ""; //this string holds the characters selected.
-  var password = ""; //this string takes the output from our function using characters from loadInfo.
+  var loadInfo = ""; //this string will load in the variables for the password.
+  var password = ""; //this string will take in the loadInfo information, then push to display the password on the site.
 
   if (quantityCharacter.value < 8 || quantityCharacter.value > 128) { 
     document.getElementById("missingnumber").innerHTML = "Please select a number between 8 and 128.";
