@@ -165,7 +165,6 @@ btngenerate.addEventListener("click",function(event){
         password += loadInfo[Math.floor(Math.random() * loadInfo.length)];
       }
       console.log(loadInfo)
-      //console.log(password) currently shows as undefined...
      document.getElementById("outputPassword").value = password;
     }
     )
