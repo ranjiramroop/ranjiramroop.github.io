@@ -31,11 +31,8 @@
                 How many characters will your password be?
                 </h6>
                 <br> 
-                <p>Enter a <strong>number</strong> between 8 and 128 for your password length in the box below, and press <em>Confirm</em>. <br>
-                <input id="boxnumber" type="text" name="enternumber" placeholder="Password # Length?" maxlength="3" required="required" />
-                <button id="confirmnumber" alt="Confirm">
-                Confirm
-                </button>
+                <p>Enter a <strong>number</strong> between 8 and 128 for your password length in the box below. <br>
+                <input id="quantityCharacter" type="number" name="enternumber" placeholder="###" min="8" max="128" required="required" />
                 </p>
               </div>
               <br>
@@ -135,18 +132,23 @@
                 <br> 
             </form>
           </div> 
-                  <textarea
-                    readonly
-                    id="password"
-                      placeholder="Your Secure Password"
-                        aria-label="Generated Password"
-                        ></textarea>
                     <button id="btngenerate">
                       Generate Password
                     </button>
                     <button id="btncopy">
                       Copy to Clipboard
-                    </button>
+                    </button> 
+                   
+                  <br>
+                  <p id= "missingnumber"></p> <p id= "failed"></p>
+                  <br>
+                  <p id= "missingcriteria"></p>
+                  <br>
+                  <p>Your unique password is:</p>
+                  <br>
+                  <input type="textbox" id="outputPassword"></input>
+                  <br>
+                  
                 
         </div>
       </div> <!--jumbotron closing div-->
@@ -162,7 +164,10 @@
           </footer>
       
       </div> 
+
+      <script src="assets/js/script.js"></script>
   </body>
+
 </html>
 
 
