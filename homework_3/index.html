@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link bootstrap.css rel="stylesheet" href="assets/css/bootstrap.css">
-
     <title>Random Password Generator</title>
   </head>
   <body>
@@ -25,7 +24,7 @@
           <h4 class="intro">Let's create a unique password!</h4>
           <br>
           <div class="form-container">
-            <form id=form action="INSERT URL HERE" method="GET">
+            <form id=form method="GET">
               <div class="criteria1-container"> 
                 <h6 class="criteria1"> 1.) A password must be <em> at least <strong> 8</strong> characters</em>, and <em>not longer than <strong>128 </strong>characters</em>. 
                 How many characters will your password be?
@@ -132,13 +131,8 @@
                 <br> 
             </form>
           </div> 
-                    <button id="btngenerate">
-                      Generate Password
-                    </button>
-                    <button id="btncopy">
-                      Copy to Clipboard
-                    </button> 
-                   
+                    <button type="button" id="btngenerate" class="btn btn-outline-secondary">Generate Password</button>
+                    <button type="button" id="btncopy" class="btn btn-outline-secondary">Copy to Clipboard</button>
                   <br>
                   <p id= "missingnumber"></p> <p id= "failed"></p>
                   <br>
@@ -146,10 +140,8 @@
                   <br>
                   <p>Your unique password is:</p>
                   <br>
-                  <input type="textbox" id="outputPassword"></input>
+                  <input type="textbox" id="outputPassword">
                   <br>
-                  
-                
         </div>
       </div> <!--jumbotron closing div-->
     </div>
@@ -162,15 +154,9 @@
               </div>
             </div>
           </footer>
-      
-      </div> 
-
       <script src="assets/js/script.js"></script>
   </body>
-
 </html>
-
 
 <!--https://jsfiddle.net/markheath/azk2cL45/1 
 that is where I found the code to use the radio buttons-->
-

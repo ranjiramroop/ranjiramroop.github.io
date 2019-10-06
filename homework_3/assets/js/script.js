@@ -165,7 +165,7 @@ btngenerate.addEventListener("click",function(event){
         password += loadInfo[Math.floor(Math.random() * loadInfo.length)];
       }
      document.getElementById("outputPassword").value = password;
-
+      document.getElementById("outputPassword").style.width="100%";
      btncopy.addEventListener("click",function(){
        document.getElementById("outputPassword").select();
        document.execCommand("copy");
