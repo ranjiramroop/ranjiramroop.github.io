@@ -22,34 +22,34 @@ var questions = [
         answer: "Bears"
     },
     {
-        title: "Which of these cannot sustain flight?\n(a) Boeing Aircrafts\n(b) Ostrich\n(c) Eagle\n(d) Flamingo",
-        choices: 
-        answer: "b"
+        title: "Which of these cannot sustain flight?",
+        choices: ["Boeing Aircrafts", "Ostrich", "Eagle", "Flamingo"],
+        answer: "Ostrich"
     },
     {
-        title: "A group of lions is known as?\n(a) An Army\n(b) A pack\n(c) A pride\n(d) A squad",
-        choices: 
-        answer: "c"
+        title: "A group of lions is known as?", 
+        choices: ["An Army", "A pack", "A pride", "A squad"],
+        answer: "A pride"
     },
     {
-        title: "A female deer is known as?\n(a) A jane\n(b) A doe\n(c) A buck\n(d) An antelope",
-        choices: 
-        answer: "b"
+        title: "A female deer is known as?",
+        choices: ["A jane", "A doe", "A buck", "An antelope"],
+        answer: "A doe"
     },
     {
-        title: "Which of the following animals have the most teeth?\n(a) Elephants\n(b) Armadillos\n(c) Blue Whales\n(d) Snakes",
-        choices: 
-        answer: "b"
+        title: "Which of the following animals have the most teeth?",
+        choices: ["Elephants", "Armadillos", "Blue Whales","Snakes"],
+        answer: "Armadillos"
     },
     {
-        title: "Which animal has the longest neck?\n(a) Swan\n(b) Flamingo\n(c) Turtle\n(d) Giraffe",
-        choices: 
-        answer: "d"
+        title: "Which animal has the longest neck?",
+        choices: ["Swan", "Flamingo", "Turtle", "Giraffe"],
+        answer: "Giraffe"
     },
     {
-        title: "Pumba, from Disney's The Lion King movie, is what type of animal?\n(a) Warthog\n(b) Dinner\n(c) Domestic Pig\n(d) Meerkat",
-        choices: 
-        answer: "a"
+        title: "Pumba, from Disney's The Lion King movie, is what type of animal?", 
+        choices: ["Warthog", "Dinner", "Domestic Pig", "Meerkat"],
+        answer: "Warthog"
     }
 ];
 var score = 0;
