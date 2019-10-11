@@ -52,7 +52,35 @@ var questions = [
         answer: "Warthog"
     }
 ];
+
+function correctQuestions(choices) {
+    choices.preventDefault();
+return choice === this.answer;
+}
+
 var score = 0;
+var questionsIndex = 0;
+
+//this is to pull out the question and display it on the screen as the questions are answered.
+function getQuestionsIndex(){
+    return this.questions[this.questionIndex];
+}
+
+//im trying this function to end the quiz if the index goes all the way thru - might need to modify this one.
+function endOfQuiz() {
+    return this.questions.length === this.questionsIndex;
+}
+
+//this function's intention is the increase the score on a correct answer
+function nextQuestion(answer){
+    this.questionsIndex++;
+
+    if(this.getQuestionsIndex().correctAnswer(answer)) {
+        this.score++;
+    }
+}
+
+
 
 for (var i=0; i < questions.length; i++){
     var response = window.title(questions[i].title);
@@ -65,6 +93,8 @@ for (var i=0; i < questions.length; i++){
 }
 alert("You received a " + score + " out of " + questions.length);
 
+
+//15 seconds per questions = 150 seconds of game play. Incorrect answer equals 15 second time decrement.
 
 
 
