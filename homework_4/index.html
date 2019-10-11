@@ -33,7 +33,7 @@
 
 
     <div class="jumbotron">
-      <div class="startQuiz" class="hidden">
+      <!-- <div class="startQuiz" class="hidden">
         <h1 class="text-center">Click Below to Start the Animal Quiz!</h1>
         <p class="lead">How do you think you stack up in your animal kingdom knowledge?</p>
         <hr class="my-4">
@@ -41,22 +41,26 @@
         <p class="lead">
           <a class="btn btn-primary btn-lg" id= startQuiz href="#" role="button">Start Quiz</a>
         </p>
-      </div>
-      <div class="questions" class="hidden">
-        <p class="QUESTION TO POPULATE?"> Insert Question here </p>
+      </div> -->
+      <div id="quiz" class="hidden">
+        <h1>Quiz</h1> <!--I may come back here and change this to Animal Quiz-->
+        <p id="question"></p>
+        <div class="buttons">
           <button id="btn0">
-            <span id="ANSWER CHOICE0"></span>
+            <span id="choice0"></span>
           </button>
           <button id="btn1">
-            <span id="ANSWER CHOICE1"></span>
-            </button>
+            <span id="choice1"></span>
+          </button>
           <button id="btn2">
-            <span id="ANSWER CHOICE2"></span>
+            <span id="choice2"></span>
           </button>
           <button id="btn3">
-              <span id="ANSWER CHOICE3"></span>
+              <span id="choice3"></span>
           </button>
-          <p id="verify"> </p>
+        </div>
+          <p id="progress">Question x of y</p> <!---I will likely come back and change this to instead say Correct or Wrong-->
+          <!--Or i might keep it and add the right or wrong below here by following the similar code structure from this JS-->
         </div>
     </div> <!-- jumbotron ending div -->
 
