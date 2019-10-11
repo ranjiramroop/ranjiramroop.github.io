@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link bootstrap.css rel="stylesheet" href="assets/css/bootstrap.css">
+  <title>The Animal Quiz</title>
+</head>
+<body>
+  <div class="container">
+  <!-- How to use storage to build list items for the high score? -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="score">
+        <a class=high-score> High Scores </a>
+          <ol>
+            Place list items here ...
+          </ol>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="timer">
+        Placing timer here...
+      </div>
+    </div>
+  </div>
+  
+
+
+    <div class="jumbotron">
+      <div class="startQuiz" class="hidden">
+        <h1 class="text-center">Click Below to Start the Animal Quiz!</h1>
+        <p class="lead">How do you think you stack up in your animal kingdom knowledge?</p>
+        <hr class="my-4">
+        <p>Do you have a jellyfish for brains? Or can you channel Steve Irwin's mind to take the top score?</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" id= startQuiz href="#" role="button">Start Quiz</a>
+        </p>
+      </div>
+      <div class="questions" class="hidden">
+        <p class="QUESTION TO POPULATE?"> Insert Question here </p>
+          <button id="btn0">
+            <span id="ANSWER CHOICE0"></span>
+          </button>
+          <button id="btn1">
+            <span id="ANSWER CHOICE1"></span>
+            </button>
+          <button id="btn2">
+            <span id="ANSWER CHOICE2"></span>
+          </button>
+          <button id="btn3">
+              <span id="ANSWER CHOICE3"></span>
+          </button>
+        </div>
+
+    </div> <!-- jumbotron ending div -->
+
+  </div> <!-- container ending div -->
+
+
+   
+
+
+  <!-- Here we have div called "random-number" where our random number will go
+  <h1 class="text-center" id="random-number"></h1>
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+        $("#random-button").on("click", function(){
+            var numero = ""
+            for (i=0 ; i < 9 ; i++){
+             numero = numero + Math.floor(Math.random() * 10)
+            }
+            var multiple = $("<div>").text(numero) // here i created an element named multiple as a div and placed numero as the text to fill it.
+                $("#random-number").prepend(multiple); // prepend allows me to write the random numbers on top of each other
+        })
+    })
+  </script> -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

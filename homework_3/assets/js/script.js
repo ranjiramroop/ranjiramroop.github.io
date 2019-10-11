@@ -172,3 +172,21 @@ btngenerate.addEventListener("click",function(event){
       });
     }
 )
+
+//i should have done something like this for my logic instead of creating the multiple combinations this:
+//  ar availableChars= "";
+//   var password = "";
+
+//   if (numbtn.checked) {
+//     password =+ nums.charAt(randomChar)
+//     availableChars += nums
+//   }
+//   if (specialbtn.checked) {
+//     availableChars += special
+//   }
+//   if (lowerbtn.checked) {
+//     availableChars += lowercase
+//   }
+//   if (upperbtn.checked) {
+//     availableChars += upper
+//   }
