@@ -2,8 +2,9 @@
 // I created an Object with Arrays to hold my questions and their correct answers.
 var questions = [
     {
-        prompt: "Which of the following is the fastest 'big cat' on Earth?\n(a) Lion\n(b) Tiger\n(c) Cougar\n(d) Cheetah",
-        answer: "d"
+        title: "Which of the following is the fastest 'big cat' on Earth?",
+        choices: ["Lion", "Tiger", "Cougar", "Cheetah"],
+        answer: "Cheetah"
     },
     {
         prompt: "Which of the following animals has fur?\n(a) Dolphin\n(b) Shark\n(c) Mouse\n(d) Frog",
