@@ -60,14 +60,15 @@ function guess(id, guess) {
 
 function showProgress() {
     var currentQuestionNumber = quiz.questionIndex + 1;
+    var currentQuizScore = quiz.score;
     var element = document.getElementById("progress");
     element.innerHTML = "Question " + currentQuestionNumber + " of " +
-        quiz.questions.length;
+    quiz.questions.length + "<br> Current score of: " + quiz.score + " correct";
 };
 
 function showScores() {
-    var gameOverHTML = "<h1>Result</h1";
-    gameOverHTML+= "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
+    var gameOverHTML = "<h1>High Score! <br></h1";
+    gameOverHTML+= "<h2 id='score'> Your score is: " + quiz.score + "</h2>";
     var element= document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 };
@@ -135,6 +136,31 @@ var quiz = new Quiz(questions);
 
 //display quiz
 populate();
+
+var timerEl = document.getElementById("timer");
+
+function quizTime() {
+    var timeLeft = 10;
+    // will need to put this into place when i have
+    // the hidden div activated// button.onclick = function() {
+
+    var timeInterval = setInterval(function() {
+      timerEl.textContent = timeLeft + " seconds remaining";
+      timeLeft--;
+  
+      if (timeLeft === -1) {
+        timerEl.textContent = "Time is up!";
+        showScores();
+        clearInterval(timeInterval);
+      }
+    }, 1000);
+  }
+  quizTime();
+
+
+
+
+//-------------------
 
 
 // var score = 0;
