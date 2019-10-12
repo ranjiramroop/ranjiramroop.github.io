@@ -33,6 +33,7 @@ Quiz.prototype.isEnded = function(){
 function populate(){
     if(quiz.isEnded()) {
         showScores();
+        stopQuizTime();
     }
     else {
         //show the question in the paragraph tag in HTML line 47
@@ -70,8 +71,8 @@ function showScores() {
     gameOverHTML+= "<h2 id='score'> Your score is: " + quiz.score + "</h2>";
     var element= document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
+    endGame();
 };
-
 
 // I created an Object with Arrays to hold my questions and their correct answers.
 // var question = document.getElementById("question");
@@ -136,10 +137,14 @@ var quiz = new Quiz(questions);
 //display quiz
 populate();
 
+document.getElementById("startQuiz").onclick = function(){
+    document.getElementById("visible").style.display = "none";
+    // document.getElementById("quiz").class = ""; //this is supposed to display the hiddent div but its not
+}
 var timerEl = document.getElementById("timer");
 
 function quizTime() {
-    var timeLeft = 150;
+    var timeLeft = 100;
     // will need to put this into place when i have
     // the hidden div activated// button.onclick = function() {
 
@@ -156,6 +161,22 @@ function quizTime() {
   }
   quizTime();
 
+
+//on my last question in the array, i want that to act as the stop button on a stop watch
+    
+// stopTime() { /* check if seconds, minutes and hours are not equal to 0 */ 
+//     if ( seconds !== 0 || minutes !== 0 || hours !== 0 ) { /* display the full time before reseting the stop watch */ var fulltime = document.getElementById( "fulltime" ); 
+//     //display the full time fulltime.style.display = "block"; var time = gethours + mins + secs; fulltime.innerHTML = 'Fulltime: ' + time; 
+//     // reset the stop watch seconds = 0; minutes = 0; hours = 0; secs = '0' + seconds; mins = '0' + minutes + ': '; gethours = '0' + hours + ': '; 
+//     /* display the stopwatch after it's been stopped */ var x = document.getElementById ("timer"); var stopTime = gethours + mins + secs; x.innerHTML = stopTime; 
+//     /* display all stop watch control buttons */ var showStart = document.getElementById ('start'); showStart.style.display = "inline-block"; var showStop = document.getElementById ("stop"); showStop.style.display = "inline-block"; 
+//     /* clear the stop watch using the setTimeout( ) return value 'clearTime' as ID */ clearTimeout( clearTime ); } // if () } // stopTime() /* you need to call the stopTime( ) function to terminate the stop watch */ window.addEventListener( 'load', function ( ) { var stop = document.getElementById ("stop"); stop.addEventListener( 'click', stopTime ); }); // stopwatch.js end 
+
+// while (password.length < quantityCharacter.value) {
+//     password += loadInfo[Math.floor(Math.random() * loadInfo.length)];
+//   }
+//  document.getElementById("outputPassword").value = password;
+
 //to do: 
 //number one:
 //I will be creating a function for the button 
@@ -165,48 +186,16 @@ function quizTime() {
 //the on click will also double down on the timer and 
 //start the timer countdown. 
 
+// number 1.5
+// i need to run a function to stop the clock to 
+//calculate the scores with the extra time bonus
+//1.75 function to calculate the score
 //number two:
-//create the form input ordered list function to store 
+//create the form input ordered list function to store the calculated score
 //in the session storage
 
 
 //-------------------
-
-
-// var score = 0;
-// var questionsIndex = 0;
-// var quiz = new Quiz(questions);
-
-// function Quiz(questions){
-//     this.score = 0;
-//     this.questions = questions;
-//     this.questionIndex = 0;
-// }
-
-// //this is to pull out the question and display it on the screen as the questions are answered.
-// function getQuestionsIndex(){
-//     return this.questions[this.questionIndex];
-// }
-
-//     function correctQuestions(choices) {
-//         choices.preventDefault();
-// return choice === this.answer;
-// }
-
-
-
-// //im trying this function to end the quiz if the index goes all the way thru - might need to modify this one.
-// function endOfQuiz() {
-//     return this.questions.length === this.questionsIndex;
-// }
-
-// //this function's intention is the increase the score on a correct answer
-// function nextQuestion(answer){
-//     this.questionsIndex++;
-//     if(this.getQuestionsIndex().correctAnswer(answer)) {
-//         this.score++;
-//     }
-// }
 
 
 
@@ -221,20 +210,6 @@ function quizTime() {
 //     }
 // }
 
-
-// // for (var i=0; i < questions.length; i++){
-// //     var response = window.title(questions[i].title);
-// //     if (response == questions[i].answer){
-// //         score++;
-// //         alert("Correct!");
-// //     } else {
-// //         alert ("Wrong!");
-// //     }
-// // }
-// // alert("You received a " + score + " out of " + questions.length);
-
-
-// // //15 seconds per questions = 150 seconds of game play. Incorrect answer equals 15 second time decrement.
 
 
 

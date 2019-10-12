@@ -19,12 +19,21 @@
       <div class="score">
         <a class=high-score> High Scores </a>
           <ol>
-            Place list items here ...
+            link to stored list items here ...
           </ol>
       </div>
     </div>
     <div class="col-md-6">
-      <div id="timer"></div>
+      <div id="timerContainer">
+        <div id="timer"></div>
+          <div class="startTimer reset" onclick="startTimer()" >
+                <i class="fas fa-play"></i>
+              </div>
+            <div class="pauseTimer reset" onclick="pauseTimer()" >
+                <i class="fas fa-pause"></i>
+              </div>
+            <div class="resetTimer reset" onclick="resetTimer()"></div>
+            </div>
     </div>
   </div>
   
@@ -33,17 +42,15 @@ the on click will also double down on the timer and start the timer countdown. I
  -->
 
     <div class="jumbotron">
-      <!-- <div class="startQuiz" class="hidden">
+      <div class="startQuiz" id="visible">
         <h1 class="text-center">Click Below to Start the Animal Quiz!</h1>
-        <p class="lead">How do you think you stack up in your animal kingdom knowledge?</p>
-        <hr class="my-4">
-        <p>Do you have a jellyfish for brains? Or can you channel Steve Irwin's mind to take the top score?</p>
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" id= startQuiz href="#" role="button">Start Quiz</a>
+        <p class="lead">How do you think you stack up when it comes to your animal kingdom knowledge?</p>
+          <a class="btn btn-primary btn-lg" id= "startQuiz" href="#" role="button">Start Quiz</a>
         </p>
-      </div> -->
-      <div id="quiz" class="hidden">
-        <h1>Quiz</h1> <!--I may come back here and change this to Animal Quiz-->
+        <!-- onclick="startTimer()" -- need this -->
+      </div>
+      <div id="quiz" class="hide">
+        <h1>Animal Quiz</h1>
         <p id="question"></p>
         <div class="buttons">
           <button id="btn0">
