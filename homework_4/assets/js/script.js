@@ -60,7 +60,6 @@ function guess(id, guess) {
 
 function showProgress() {
     var currentQuestionNumber = quiz.questionIndex + 1;
-    var currentQuizScore = quiz.score;
     var element = document.getElementById("progress");
     element.innerHTML = "Question " + currentQuestionNumber + " of " +
     quiz.questions.length + "<br> Current score of: " + quiz.score + " correct";
@@ -140,7 +139,7 @@ populate();
 var timerEl = document.getElementById("timer");
 
 function quizTime() {
-    var timeLeft = 10;
+    var timeLeft = 150;
     // will need to put this into place when i have
     // the hidden div activated// button.onclick = function() {
 
@@ -157,7 +156,18 @@ function quizTime() {
   }
   quizTime();
 
+//to do: 
+//number one:
+//I will be creating a function for the button 
+//displayed on the starting div
+//On click for the start button is going to 
+//hide the current div and unhide the question div
+//the on click will also double down on the timer and 
+//start the timer countdown. 
 
+//number two:
+//create the form input ordered list function to store 
+//in the session storage
 
 
 //-------------------
