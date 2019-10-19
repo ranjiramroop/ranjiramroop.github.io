@@ -6,9 +6,11 @@ $('#currentDay').html(now);
 //every time user clicks the save button, it should build an array from 9am-5p
 //there should be 9 items in the array
 
-$("button").onclick.function()
-    event.preventDefault();
-    localStorage.setItem("scheduled");
+var scheduleSave = $("textarea");
+
+$("button").onclick.function(saving)
+    saving.preventDefault();
+    localStorage.setItem("scheduled"), scheduleSave;
 
 
 $(document).ready(function(){
