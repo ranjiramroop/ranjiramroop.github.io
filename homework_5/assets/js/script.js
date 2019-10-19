@@ -9,29 +9,31 @@ $('#currentDay').html(now);
 
 var hour = moment().hour();
 var id = "#9, #10, #11, #12, #13, #14, #15, #16, #17";
-//console.log(hour); //this gives back the correct hour
-for (var i = 9; i < 17; i++){
+// console.log(hour); //this gives back the correct hour
+for (var i = 9; i < 18; i++) {
+    console.log(i); //makes sure that all the hours are getting called through i
+ 
     if (i < hour) {
-        $([id] + i).addClass("past")  //adding the class here to match the css classes to change color according to time
+        $("#" + i).addClass("past")  //adding the class here to match the css classes to change color according to time
     }
     else if (i === hour) {
-        $([id] + i).addClass("present")
+        $("#" + i).addClass("present")
     }
     else {
-        $([id] + i).addClass("future")
+        $("#" + i).addClass("future")
     }
 }
 
 $("button").on("click", function(event){
     event.preventDefault();
-    var textEvent = $("textarea" + textEvent).val();  //when the save button is clicked, the textarea will save the value
-    localStorage.setItem("scheduled" + event, textEvent); // value saved to local storage
+    var textEvent = $("textarea" + id).val();  //when the save button is clicked, the textarea will save the value
+    localStorage.setItem("scheduled" + id, textEvent); // value saved to local storage
 })
 
 $(document).ready(function(){
-    for (i = 9; i < 17; i++) {
-        var recallTextEvent = localStorage.getItem("scheduled" + i);
-        $("textarea" + i).html(recallTextEvent); // trying to populate the text area with the local storage
+    for (i = 9; i < 18; i++) {
+        var getText = localStorage.getItem("scheduled" + i);
+        $("textarea" + i).html(getText); // trying to populate the text area with the local storage
     }
     })
 
