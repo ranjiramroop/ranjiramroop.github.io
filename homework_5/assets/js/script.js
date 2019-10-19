@@ -30,7 +30,7 @@ $("button").on("click", function(event){
 $(document).ready(function(){
     for (i = 0; i < 9; i++) {
         var recallSaveEvent = localStorage.getItem("scheduled" + i);
-        $("textarea" + i).html(recallSaveEvent);
+        $("textarea" + i).html(recallSaveEvent); // trying to populate the text area with the local storage
     }
     })
 
