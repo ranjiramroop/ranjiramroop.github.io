@@ -8,10 +8,10 @@ $('#currentDay').html(now);
 
 var scheduleSave = $("textarea");
 
-$("button").onclick.function(saving)
+$("button").on("click", function(saving){
     saving.preventDefault();
-    localStorage.setItem("scheduled"), scheduleSave;
-
+    localStorage.setItem("scheduled" + i, scheduleSave);
+})
 
 $(document).ready(function(){
         saveButton = localStorage.getItem(i);
