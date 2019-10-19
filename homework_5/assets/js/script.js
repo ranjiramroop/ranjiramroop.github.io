@@ -24,10 +24,10 @@ for (var i = 0; i < 9; i++){
 
 var scheduleSave = $("textarea");
 
-$("button").on("click", function(saving){
-    saving.preventDefault();
-    (scheduleSave + saving).val();
-    localStorage.setItem("scheduled" + saving, scheduleSave);
+$("button").on("click", function(event){
+    event.preventDefault();
+    (scheduleSave + event).val();
+    localStorage.setItem("scheduled" + event, scheduleSave);
 })
 
 // $(document).ready(function(){
