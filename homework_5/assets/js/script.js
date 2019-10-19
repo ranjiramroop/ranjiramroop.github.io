@@ -8,16 +8,17 @@ $('#currentDay').html(now);
 //there should be 9 items in the array
 
 var hour = moment().hour();
-//console.log(hour); //this does give back the correct hour
-for (var i = 0; i < 9; i++){
+var id = "#9, #10, #11, #12, #13, #14, #15, #16, #17";
+//console.log(hour); //this gives back the correct hour
+for (var i = 0; i < 17; i++){
     if (i < hour) {
-        $("#9" + i).addClass("past")  //adding the class here to match the css classes to change color according to time
+        $([id] + i).addClass("past")  //adding the class here to match the css classes to change color according to time
     }
     else if (i === hour) {
-        $("#9"+ i).addClass("present")
+        $([id] + i).addClass("present")
     }
     else {
-        $("#9"+ i).addClass("future")
+        $([id] + i).addClass("future")
     }
 }
 
@@ -28,7 +29,7 @@ $("button").on("click", function(event){
 })
 
 $(document).ready(function(){
-    for (i = 0; i < 9; i++) {
+    for (i = 0; i < 17; i++) {
         var recallSaveEvent = localStorage.getItem("scheduled" + i);
         $("textarea" + i).html(recallSaveEvent); // trying to populate the text area with the local storage
     }
