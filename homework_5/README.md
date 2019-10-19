@@ -11,7 +11,7 @@ The hours that are in the past use a gray background color.
 Type the schedule into the middle section, between the time slot and the save button. Once you are satisfied with your text entry, click on the "save" button on the right side, in-line with the respective hour. 
 Saving with the "save" button will allow you to come back to the same schedule you created earlier that day. 
 
-Here is the link to the deployed github site: ranjiramroop.github.io/homework_5/ 
+Here is the link to the deployed github site: https://ranjiramroop.github.io/homework_5/
 
 --
 
