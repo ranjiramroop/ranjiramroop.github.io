@@ -36,7 +36,7 @@ function populate(){
         stopQuizTime();
     }
     else {
-        //show the question in the paragraph tag in HTML line 47
+        //show the question in the paragraph tag
         var element = document.getElementById("question");
         element.innerHTML = quiz.getQuestionIndex().title;
 
@@ -75,8 +75,6 @@ function showScores() {
 };
 
 // I created an Object with Arrays to hold my questions and their correct answers.
-// var question = document.getElementById("question");
-
 //this is where questionIndex comes into play
 var questions = [
     new Question(
@@ -145,7 +143,7 @@ var timerEl = document.getElementById("timer");
 
 function quizTime() {
     var timeLeft = 100;
-    // will need to put this into place when i have
+    // will need to put a new function into place when i have
     // the hidden div activated// button.onclick = function() {
 
     var timeInterval = setInterval(function() {
@@ -164,18 +162,13 @@ function quizTime() {
 
 //on my last question in the array, i want that to act as the stop button on a stop watch
     
-// stopTime() { /* check if seconds, minutes and hours are not equal to 0 */ 
+// NOTES ON STOPPING TIME: stopTime() { /* check if seconds, minutes and hours are not equal to 0 */ 
 //     if ( seconds !== 0 || minutes !== 0 || hours !== 0 ) { /* display the full time before reseting the stop watch */ var fulltime = document.getElementById( "fulltime" ); 
 //     //display the full time fulltime.style.display = "block"; var time = gethours + mins + secs; fulltime.innerHTML = 'Fulltime: ' + time; 
 //     // reset the stop watch seconds = 0; minutes = 0; hours = 0; secs = '0' + seconds; mins = '0' + minutes + ': '; gethours = '0' + hours + ': '; 
 //     /* display the stopwatch after it's been stopped */ var x = document.getElementById ("timer"); var stopTime = gethours + mins + secs; x.innerHTML = stopTime; 
 //     /* display all stop watch control buttons */ var showStart = document.getElementById ('start'); showStart.style.display = "inline-block"; var showStop = document.getElementById ("stop"); showStop.style.display = "inline-block"; 
 //     /* clear the stop watch using the setTimeout( ) return value 'clearTime' as ID */ clearTimeout( clearTime ); } // if () } // stopTime() /* you need to call the stopTime( ) function to terminate the stop watch */ window.addEventListener( 'load', function ( ) { var stop = document.getElementById ("stop"); stop.addEventListener( 'click', stopTime ); }); // stopwatch.js end 
-
-// while (password.length < quantityCharacter.value) {
-//     password += loadInfo[Math.floor(Math.random() * loadInfo.length)];
-//   }
-//  document.getElementById("outputPassword").value = password;
 
 //to do: 
 //number one:
@@ -193,11 +186,7 @@ function quizTime() {
 //number two:
 //create the form input ordered list function to store the calculated score
 //in the session storage
-
-
 //-------------------
-
-
 
 // function showtime(){
 //     if(quiz.endOfQuiz()) {
@@ -209,12 +198,5 @@ function quizTime() {
 //         element.innerHTML = quiz.getQuestionsIndex().text;
 //     }
 // }
-
-
-
-
-
-
-
 
 
