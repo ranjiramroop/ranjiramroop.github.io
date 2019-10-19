@@ -27,7 +27,7 @@ for (var i = 0; i < 9; i++){
 $("button").on("click", function(event){
     event.preventDefault();
     var saveEvent = $("textarea" + saveEvent).val();
-    localStorage.setItem("scheduled" + event, scheduleSave);
+    localStorage.setItem("scheduled" + event, saveEvent);
 })
 
 // $(document).ready(function(){
