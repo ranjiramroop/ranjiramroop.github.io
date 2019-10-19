@@ -8,7 +8,7 @@ $('#currentDay').html(now);
 //there should be 9 items in the array
 
 var hour = moment().hour();
-var id = "#9, #10, #11, #12, #13, #14, #15, #16, #17";
+// var id = "#9, #10, #11, #12, #13, #14, #15, #16, #17";
 // console.log(hour); //this gives back the correct hour
 for (var i = 9; i < 18; i++) {
     console.log(i); //makes sure that all the hours are getting called through i
@@ -26,16 +26,20 @@ for (var i = 9; i < 18; i++) {
 
 $("button").on("click", function(event){
     event.preventDefault();
-    var textEvent = $("textarea" + id).val();  //when the save button is clicked, the textarea will save the value
-    localStorage.setItem("scheduled" + id, textEvent); // value saved to local storage
+    var id = $(this).attr("id")
+    id = id.substring(0,id.length-1);  //when the save button is clicked, the textarea will save the value
+    var text = $("#"+id).val();
+    localStorage.setItem(id, text); // want to save value to local storage
 })
 
 $(document).ready(function(){
     for (i = 9; i < 18; i++) {
-        var getText = localStorage.getItem("scheduled" + i);
-        $("textarea" + i).html(getText); // trying to populate the text area with the local storage
+        var getText = localStorage.getItem(i);
+        $("#"+i).html(getText); // trying to populate the text area with the local storage
     }
-    })
+})
+
+
 
 
 
