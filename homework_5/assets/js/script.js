@@ -11,7 +11,7 @@ var hour = moment().hour();
 //console.log(hour); //this does give back the correct hour
 for (var i = 0; i < 9; i++){
     if (i < hour) {
-        $("#9" + i).addClass("past")  //adding the class here to match the css to change color
+        $("#9" + i).addClass("past")  //adding the class here to match the css classes to change color according to time
     }
     else if (i === hour) {
         $("#9"+ i).addClass("present")
@@ -21,18 +21,17 @@ for (var i = 0; i < 9; i++){
     }
 }
 
-
-// var scheduleSave = $("textArea");
-
 $("button").on("click", function(event){
     event.preventDefault();
-    var saveEvent = $("textarea" + saveEvent).val();
-    localStorage.setItem("scheduled" + event, saveEvent);
+    var saveEvent = $("textarea" + saveEvent).val();  //when the save button is clicked, the textarea will save the value
+    localStorage.setItem("scheduled" + event, saveEvent); // value saved to local storage
 })
 
-// $(document).ready(function(){
-//         saveButton = localStorage.getItem(i);
-//         $(".textarea" + i).html(saveButton);
-//     })
+$(document).ready(function(){
+    for (i = 0; i < 9; i++) {
+        var recallSaveEvent = localStorage.getItem("scheduled" + i);
+        $("textarea" + i).html(recallSaveEvent);
+    }
+    })
 
 
