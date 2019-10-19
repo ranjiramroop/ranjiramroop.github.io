@@ -22,11 +22,11 @@ for (var i = 0; i < 9; i++){
 }
 
 
-var scheduleSave = $("textarea");
+// var scheduleSave = $("textArea");
 
 $("button").on("click", function(event){
     event.preventDefault();
-    (scheduleSave + event).val();
+    var saveEvent = $("textarea" + saveEvent).val();
     localStorage.setItem("scheduled" + event, scheduleSave);
 })
 
@@ -34,4 +34,5 @@ $("button").on("click", function(event){
 //         saveButton = localStorage.getItem(i);
 //         $(".textarea" + i).html(saveButton);
 //     })
+
 
