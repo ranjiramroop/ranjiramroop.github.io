@@ -10,7 +10,7 @@ $('#currentDay').html(now);
 for (var i = 0; i < 9; i++){
     var hour = moment().hour();
     if (i < hour) {
-        addAttr(".past")
+        $(i).addClass(".past")
     }
 }
 
