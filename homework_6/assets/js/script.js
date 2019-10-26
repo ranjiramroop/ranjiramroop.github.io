@@ -1,6 +1,5 @@
 var APIKey = "166a433c57516f51dfab1f7edaed8413";
 var cityList;
-var city = $(".city").val();
 
 if (localStorage.getItem("cityList")) {
   cityList = JSON.parse(localStorage.getItem("cityList"))}
