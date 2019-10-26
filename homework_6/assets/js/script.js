@@ -52,8 +52,8 @@ if (localStorage.getItem("cityList")) {
           console.log(uvIndex);
           console.log(response);
             $(".uv").text("UV Index: " + response[0].value);
-            response[0].value = $("<div>").addClass("bg-red");
-            console.log("UV Index: " + response[0].value);
+            $(".uv").css( "background-color", "yellow" ); 
+             console.log("UV Index: " + response[0].value);
           
         })
         .then(function(response){
