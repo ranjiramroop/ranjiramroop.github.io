@@ -48,7 +48,14 @@ if (localStorage.getItem("cityList")) {
             console.log("UV Index: " + response[0].value);
           
         })
+        .then(function(response){
+          fiveDayForecast.empty();
+          for (var i = 0; i < 5; i++) {
+            var fore = $("<div>");
+            fore.attr("class", "forediv" + [i]) 
+            
+          }     
+        })
       });
     });
       //https://api.openweathermap.org/data/2.5/weather?q=Bujumbura,Burundi&units=imperial&appid=166a433c57516f51dfab1f7edaed8413
-//line 3 is using the city of bujumbura and will need to be replaced with the json parse info for the city
