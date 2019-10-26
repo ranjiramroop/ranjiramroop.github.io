@@ -7,7 +7,7 @@ if (localStorage.getItem("cityList")) {
   else {cityList = [];
   } 
   //working the city name between search entry and local storage
-  $("#searchtext").click(function (){
+  $("#searchbutton").click(function (){
     event.preventDefault()
     var city = $("input").val();
     var newCity = $("<li>");
