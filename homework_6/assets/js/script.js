@@ -61,12 +61,15 @@ if (localStorage.getItem("cityList")) {
              console.log("UV Index: " + response[0].value);
         })
         .then(function(response){
-          fiveDayForecast.empty();
+          $(".fiveDayForecast").empty();
           for (var i = 0; i < 5; i++) {
-            var forecast = $("<div>");
-            forecast.attr("class", "forecastdiv" + [i]) 
-            var date = moment().format('DD MM');
-            console.log(date);
+            var newDate = $("<div>").css("background-color", "light-blue", "color", "white").attr("id", i);
+            var newIcon = $("<div>") 
+            var newTemp = $("<div>")
+            var newHumid = $("<div>")
+            
+            
+          
           }     
         })
       });
