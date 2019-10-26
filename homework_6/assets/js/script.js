@@ -1,10 +1,8 @@
       //This is the API key
     var APIKey = "166a433c57516f51dfab1f7edaed8413";
-
-    // Here we are building the URL we need to query the database
+    // Here we build the URL we need to query the database
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
       "q=Bujumbura,Burundi&units=imperial&appid=" + APIKey;
-
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
       url: queryURL,
@@ -14,10 +12,8 @@
       .then(function(response) {
         // Log the queryURL
         console.log(queryURL);
-
         // Log the resulting object
         console.log(response);
-
         // Transfer content to HTML
         $(".city").html("<h1>" + response.name + " Weather Details</h1>");
         $(".wind").text("Wind Speed: " + response.wind.speed);
@@ -29,3 +25,5 @@
         console.log("Humidity: " + response.main.humidity);
         console.log("Temperature (F): " + response.main.temp);
       });
+      //https://api.openweathermap.org/data/2.5/weather?q=Bujumbura,Burundi&units=imperial&appid=166a433c57516f51dfab1f7edaed8413
+//line 5 is using the city of bujumbura and will need to be replaced with the json parse info for the city
