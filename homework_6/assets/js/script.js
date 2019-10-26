@@ -51,9 +51,10 @@ if (localStorage.getItem("cityList")) {
         .then(function(response){
           fiveDayForecast.empty();
           for (var i = 0; i < 5; i++) {
-            var fore = $("<div>");
-            fore.attr("class", "forediv" + [i]) 
-            
+            var forecast = $("<div>");
+            forecast.attr("class", "forecastdiv" + [i]) 
+            var date = moment().format('DD MM');
+            console.log(date);
           }     
         })
       });
