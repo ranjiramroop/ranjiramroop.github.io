@@ -8,16 +8,20 @@ if (localStorage.getItem("cityList")) {
   //working the city name between search entry and local storage
   $("#searchbutton").click(function (){
     event.preventDefault()
-    var city = $("input").val();
+    var city = $("input").val().trim();
+    console.log(city) // the city entered gets logged
     var newCity = $("<li>");
-    newCity.text(city);
+    newCity.text(city); // the entered city gets written to the page
     $("#cityList").append(newCity);
     var newCityButton = { name: city};
     cityList.push(newCityButton);
-    newCity.attr("button");
+    // newCityButton.addClass("button");
     localStorage.setItem("cityList", JSON.stringify(cityList));
-    //this is for the current weather
+    $("input").val("");
+    //Current city weather
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIKey;
+    // found how to get the respective weather related symbols - https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon
+    var iconURL = "http://openweathermap.org/img/w/10d.png";
     $.ajax({
       url: queryURL,
       method: "GET"
