@@ -52,7 +52,13 @@ if (localStorage.getItem("cityList")) {
           console.log(uvIndex);
           console.log(response);
             $(".uv").text("UV Index: " + response[0].value);
-            $(".uv").css( "background-color", "yellow" ); 
+            if (response[0].value > 0 && response[0].value <=6.5){
+              $(".uv").css( "background-color", "yellow" );
+            }
+            else if (response[0].value > 6.5) {
+              $(".uv").css( "background-color", "orange");
+            }
+             
              console.log("UV Index: " + response[0].value);
           
         })
