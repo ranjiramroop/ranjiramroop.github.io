@@ -20,8 +20,7 @@ if (localStorage.getItem("cityList")) {
     $("input").val("");
     //Current city weather
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIKey;
-    // found how to get the respective weather related symbols - https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon
-    var iconURL = "http://openweathermap.org/img/w/10d.png";
+    // found how to get the respective weather related symbols - https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon    
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -31,6 +30,10 @@ if (localStorage.getItem("cityList")) {
           console.log(queryURL); // Log the queryURL
           console.log(response); // Log the resulting object
             $(".city").html("<h2>" + response.name + " Current Weather</h2>");
+            var iconIndex = response.weather[0].icon;
+            var iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
+            var iconDiv = $("<img>").attr('src', iconURL);
+            $(".city").append(iconDiv);
             $(".wind").text("Wind Speed: " + response.wind.speed);
             $(".humidity").text("Humidity: " + response.main.humidity);
             $(".temp").text("Temperature (F) " + response.main.temp); // Transfer content to HTML
