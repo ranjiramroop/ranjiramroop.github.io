@@ -1,6 +1,4 @@
-  var APIKey = "166a433c57516f51dfab1f7edaed8413";
-    
-      //This is our API key
+      //This is the API key
     var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
     // Here we are building the URL we need to query the database
@@ -31,9 +29,3 @@
         console.log("Humidity: " + response.main.humidity);
         console.log("Temperature (F): " + response.main.temp);
       });
-  </script>
-        
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/js/script.js"></script>
