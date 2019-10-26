@@ -29,7 +29,7 @@ if (localStorage.getItem("cityList")) {
         .then(function(response) {
           console.log(queryURL); // Log the queryURL
           console.log(response); // Log the resulting object
-            $(".city").html("<h2>" + response.name + " Current Weather</h2>");
+            $(".city").html("<h2>" + response.name + " " + moment().format('L') + "</h2>");
             var iconIndex = response.weather[0].icon;
             var iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
             var iconDiv = $("<img>").attr('src', iconURL);
@@ -58,9 +58,7 @@ if (localStorage.getItem("cityList")) {
             else if (response[0].value > 6.5) {
               $(".uv").css( "background-color", "orange");
             }
-             
              console.log("UV Index: " + response[0].value);
-          
         })
         .then(function(response){
           fiveDayForecast.empty();
