@@ -59,7 +59,7 @@ if (localStorage.getItem("cityList")) {
               $(".uv").css( "background-color", "orange");
             }
              console.log("UV Index: " + response[0].value);
-            var forecastURL = "api.openweathermap.org/data/2.5/forecast?q=" + city + "&apikey=" + APIKey;
+            var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&apikey=" + APIKey;
              $.ajax({
           url: forecastURL,
           method: "GET"
