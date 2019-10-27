@@ -17,27 +17,27 @@
     <header>
       <h1 class="sticky-top text-center">Weather Dashboard</h1>
     </header>
-      <div class="bscontainer">
+      <div class="bscontainer flex">
         <div class="row">
-          <div class="col-md-3 flex">
-            <div class="searchcity">
-              <p>Search for a City:</p>
-                <div class="input-group md-form form-sm form-2 pl-0">
-                <input class="form-control my-0 py-1 lime-border" type="search" id="searchtext" placeholder="City Name" aria-label="Search">
-                  <div class="input-group-append">
-                  <span class="input-group-text lime lighten-2" id="searchbutton"><i class="fas fa-search text-grey"
-                    aria-hidden="true"></i></span>
+          <div class="col-md-3">
+            <div class="row"> 
+              <div class="searchcity">
+                <p>Search for a City:</p>
+                  <div class="input-group md-form form-sm form-2 pl-0">
+                    <input class="form-control my-0 py-1 lime-border" type="search" id="searchtext" placeholder="City Name" aria-label="Search">
+                    <span class="input-group-text lime lighten-2" id="searchbutton"><i class="fas fa-search text-grey"
+                      aria-hidden="true"></i></span>
                   </div>
-                    <div class="row">
-                        <div class="col-md-12 flex">
+                  <div class="row">
+                    <div class="col-md-12">
                       <ul class= "newcity-button buttons" id="citylist">
                         <!-- This list will append the city buttons-->
                       </ul>
                     </div> 
-                </div>
+                  </div>
+              </div>
             </div>
-            </div>
-          </div>
+          </div> 
           <div class="col-md-9">
             <div class="resultscontainer">
               <h2 class="city"></h2> <!--City name should populate here-->

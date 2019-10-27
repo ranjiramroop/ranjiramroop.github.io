@@ -171,3 +171,13 @@ $(".buttons").on("click","li", function(){
             })
             });
           });
+          $(document).ready(function () {
+            if (cityList !== []) {
+                for (var i = 0; i < cityList.length; i++) {
+                    localStorage.getItem(cityList[i].name);
+                    var Button = $("<li>");
+                    Button.text(cityList[i].name).addClass("btn btn-outline-dark line-item list-group-item").attr('id', "city-name-" + i);
+                    $(".list-buttons").append(Button);
+                }
+            }
+        })
