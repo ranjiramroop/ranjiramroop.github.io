@@ -80,7 +80,6 @@ if (localStorage.getItem("cityList")) {
                   iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
                   newIcon = $("<img>").addClass("").attr('src', iconURL);
                   newDate.html(moment().add((i+1), 'days').format('L'));
-                  
                   $(".fiveDayForecast").append(newDate);
                   $(newDate).append(newIcon);
                   $(".row" + i).append(iconIndex);
@@ -131,7 +130,7 @@ $(".buttons").on("click","li", function(){
         .then(function (response){
           console.log(uvIndex);
           console.log(response);
-            $(".uv").text("UV Index: " + response[0].value);
+            $(".uv").text("UV Index: " + response[0].value).addClass("container");
             if (response[0].value > 0 && response[0].value <=6.5){
               $(".uv").css( "background-color", "yellow" );
             }
@@ -181,3 +180,14 @@ $(".buttons").on("click","li", function(){
                 }
             }
         })
+      // function updateUserDiv() {
+      //   //use .pop() to get the last (newest) item in the array
+      //   var user = JSON.parse(localStorage.getItem("cityList")).pop()
+      //   //update the DOM
+      //   $("#name").text(user.name)
+      //   $("#email").text(user.email)
+      //   $("#age").text(user.age)
+      //   $("#comment").text(user.comment)
+      // }
+      // //when page first loads, display the most recent user
+      // updateUserDiv()

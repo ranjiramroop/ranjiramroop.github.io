@@ -15,9 +15,9 @@ h1 {
     cursor: pointer;
     height: 50%;
 }
-.fiveDayForecast {
+h4 {
     width: 100%;
-    margin: 10px;
+    margin-top: 10px;
 }
 .newdate {
     background-color: darkslategrey;
@@ -27,14 +27,4 @@ h1 {
     padding: 4px;
     margin-top: 10px;
     margin: 10px;
-
 }
-/* .newicon {
-
-}
-.newtemp{
-
-}
-.newhumid{
-
-} */
