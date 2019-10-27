@@ -15,11 +15,17 @@ h1 {
 .fas {
     cursor: pointer;
 }
+.fiveDayForecast {
+    width: 100%;
+}
 .newdate {
-    background-color: lightskyblue;
-    color: darkslategrey;
-    border: solid, darkblue 2px;
+    background-color: darkslategrey;
+    /* background-color: rgba(17, 17, 230, 0.797); */
+    color: white;
+    border: solid, black;
+    border-width: 1px;
     padding: 4px;
+    margin-top: 10px;
     margin: 10px;
 
 }

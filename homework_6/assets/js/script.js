@@ -66,8 +66,8 @@ if (localStorage.getItem("cityList")) {
               })
               .then(function(response){
                 $(".fiveDayForecast").empty();
-                var forecastWeek = $("<h4>").text("5-Day Forecast");
-                $(".fiveDayForecast").append(forecastWeek);
+                var forecastWeek = $("<h4>").text("5-Day Forecast:");
+                $(".fiveDayForecast").append(forecastWeek).addClass("row col-md-12");
                 console.log($(".fiveDayForecast"));
                 console.log(forecastWeek);
                 for (var i = 0; i < 5; i++) {
@@ -77,7 +77,7 @@ if (localStorage.getItem("cityList")) {
                   var newHumid = $("<div>").addClass("text-black newhumid");
                   iconIndex = response.list[i].weather[0].icon;
                   iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
-                  iconDiv = $("<img>").addClass("").attr('src', iconURL);
+                  newIcon = $("<img>").addClass("").attr('src', iconURL);
                   newDate.html(moment().add((i+1), 'days').format('L'));
                   
                   $(".fiveDayForecast").append(newDate);
