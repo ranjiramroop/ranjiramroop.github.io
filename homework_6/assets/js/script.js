@@ -39,7 +39,7 @@ if (localStorage.getItem("cityList")) {
             $(".temp").text("Temperature (F) " + response.main.temp); // Transfer content to HTML
             // Console log the data
             console.log("Wind Speed: " + response.wind.speed);
-            console.log("Humidity: " + response.main.humidity);
+            console.log("Humidity: " + response.main.humidity + " %");
             console.log("Temperature (F): " + response.main.temp);
             var lon = response.coord.lon;
             var lat = response.coord.lat;
@@ -61,15 +61,25 @@ if (localStorage.getItem("cityList")) {
              console.log("UV Index: " + response[0].value);
         })
         .then(function(response){
-          $(".fiveDayForecast").empty();
+          // $(".fiveDayForecast").empty();
+          var forecastWeek = $("<h4>").text("5-Day Forecast");
+          $(".fiveDayForecast").append(forecastWeek);
           for (var i = 0; i < 5; i++) {
-            var newDate = $("<div>").css("background-color", "light-blue", "color", "white").attr("id", i);
-            var newIcon = $("<div>") 
-            var newTemp = $("<div>")
-            var newHumid = $("<div>")
-            
-            
-          
+            var newDate = $("<div>").addClass("background-color", "light-blue", "color", "white").attr("id", i);
+            var newIcon = $("<div>").addClass("row" +[i]);
+            var newTemp = $("<div>").addClass("text-white");
+            var newHumid = $("<div>").addClass("text-white");
+            iconIndex = response.list[i].weather[0].icon;
+            iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
+            iconDiv = $("<img>").addClass("").attr('src', iconURL);
+            newDate.html(moment().add((i+1), 'days').format('L'));
+            $(".fiveDayForecast").append(newDate);
+            $(newDate).append(newIcon);
+            $(".row" + i).append(iconIndex);
+            $(newTemp).html("Temperature (F) " + response.list[i].main.temp);
+            $("#" + i).append(newTemp);
+            $(newHumid).text("Humidity: " + response.list[i].main.humidity + " %");
+            $("#" + i).append(newHumid);
           }     
         })
       });
