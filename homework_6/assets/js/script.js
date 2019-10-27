@@ -59,18 +59,19 @@ if (localStorage.getItem("cityList")) {
               $(".uv").css( "background-color", "orange");
             }
              console.log("UV Index: " + response[0].value);
-        
-        $.ajax({
-          url: queryURL,
+            var forecastURL = "api.openweathermap.org/data/2.5/forecast?q=" + city + "&apikey=" + APIKey;
+             $.ajax({
+          url: forecastURL,
           method: "GET"
         })
         .then(function(response){
           $(".fiveDayForecast").empty();
           var forecastWeek = $("<h4>").text("5-Day Forecast");
           $(".fiveDayForecast").append(forecastWeek);
+          console.log($(".fiveDayForecast"));
           console.log(forecastWeek);
           for (var i = 0; i < 5; i++) {
-            var newDate = $("<div>").addClass("background-color", "light-blue", "color", "white").attr("id", i);
+            var newDate = $("<div>").addClass("text-white").attr("id", i);
             var newIcon = $("<div>").addClass("row" +[i]);
             var newTemp = $("<div>").addClass("text-white");
             var newHumid = $("<div>").addClass("text-white");
@@ -78,6 +79,7 @@ if (localStorage.getItem("cityList")) {
             iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
             iconDiv = $("<img>").addClass("").attr('src', iconURL);
             newDate.html(moment().add((i+1), 'days').format('L'));
+            
             $(".fiveDayForecast").append(newDate);
             $(newDate).append(newIcon);
             $(".row" + i).append(iconIndex);
