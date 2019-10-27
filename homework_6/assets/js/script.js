@@ -12,8 +12,8 @@ if (localStorage.getItem("cityList")) {
     console.log(city) // the city entered gets logged
     var newCity = $("<li>");
     newCity.text(city); // the entered city gets written to the page
-    newCity.addClass("btn").attr("id", "city" + cityList.length);
-    $("#cityList").append(newCity);
+    newCity.addClass("btn list-group-item").attr("id", "citybutton" + cityList.length);
+    $(".newcity-button").append(newCity);
     var newCityButton = { name: city};
     cityList.push(newCityButton);
     // newCityButton.addClass("button");
@@ -112,7 +112,7 @@ $(".buttons").on("click","li", function(){
             var iconIndex = response.weather[0].icon;
             var iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
             var iconDiv = $("<img>").attr('src', iconURL);
-            var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&apikey=" + APIKey;
+            var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + newCityButtonText + "&apikey=" + APIKey;
             $(".city").append(iconDiv);
             $(".wind").text("Wind Speed: " + response.wind.speed);
             $(".humidity").text("Humidity: " + response.main.humidity);
