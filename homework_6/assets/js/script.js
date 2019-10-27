@@ -59,11 +59,16 @@ if (localStorage.getItem("cityList")) {
               $(".uv").css( "background-color", "orange");
             }
              console.log("UV Index: " + response[0].value);
+        
+        $.ajax({
+          url: queryURL,
+          method: "GET"
         })
         .then(function(response){
-          // $(".fiveDayForecast").empty();
+          $(".fiveDayForecast").empty();
           var forecastWeek = $("<h4>").text("5-Day Forecast");
           $(".fiveDayForecast").append(forecastWeek);
+          console.log(forecastWeek);
           for (var i = 0; i < 5; i++) {
             var newDate = $("<div>").addClass("background-color", "light-blue", "color", "white").attr("id", i);
             var newIcon = $("<div>").addClass("row" +[i]);
@@ -82,6 +87,7 @@ if (localStorage.getItem("cityList")) {
             $("#" + i).append(newHumid);
           }     
         })
+      })
       });
     });
       //https://api.openweathermap.org/data/2.5/weather?q=Bujumbura,Burundi&units=imperial&appid=166a433c57516f51dfab1f7edaed8413
