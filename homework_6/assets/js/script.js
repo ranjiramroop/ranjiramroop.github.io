@@ -72,7 +72,7 @@ if (localStorage.getItem("cityList")) {
                 console.log(forecastWeek);
                 for (var i = 0; i < 5; i++) {
                   var newDate = $("<div>").addClass("newdate").attr("id", i);
-                  var newIcon = $("<div>").addClass("row new icon" +[i]);
+                  var newIcon = $("<div>").addClass("row newicon" +[i]);
                   var newTemp = $("<div>").addClass("text-black newtemp");
                   var newHumid = $("<div>").addClass("text-black newhumid");
                   iconIndex = response.list[i].weather[0].icon;
@@ -83,7 +83,7 @@ if (localStorage.getItem("cityList")) {
                   $(".fiveDayForecast").append(newDate);
                   $(newDate).append(newIcon);
                   $(".row" + i).append(iconIndex);
-                  $(newTemp).html("Temperature (F) " + response.list[i].main.temp);
+                  $(newTemp).html("Temperature " + ((response.list[i].main.temp - 273.15) * 1.8 + 32).toFixed(1) + ' &deg' + "F");
                   $("#" + i).append(newTemp);
                   $(newHumid).text("Humidity: " + response.list[i].main.humidity + " %");
                   $("#" + i).append(newHumid);
