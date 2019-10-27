@@ -17,10 +17,10 @@ h1 {
 }
 .fiveDayForecast {
     width: 100%;
+    margin: 10px;
 }
 .newdate {
     background-color: darkslategrey;
-    /* background-color: rgba(17, 17, 230, 0.797); */
     color: white;
     border: solid, black;
     border-width: 1px;
