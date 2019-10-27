@@ -32,7 +32,7 @@ if (localStorage.getItem("cityList")) {
           console.log(response); // Log the resulting object
             $(".city").html("<h2>" + response.name + " " + moment().format('L') + "</h2>");
             var iconIndex = response.weather[0].icon;
-            var iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
+            var iconURL = "https://openweathermap.org/img/w/" + iconIndex + ".png";
             var iconDiv = $("<img>").attr('src', iconURL);
             var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&apikey=" + APIKey;
             $(".city").append(iconDiv);
@@ -45,7 +45,7 @@ if (localStorage.getItem("cityList")) {
             console.log("Temperature (F): " + response.main.temp);
             var lon = response.coord.lon;
             var lat = response.coord.lat;
-    var uvIndex = "http://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&apikey=" + APIKey;
+    var uvIndex = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&apikey=" + APIKey;
     $.ajax({
       url: uvIndex,
       method: "GET"
@@ -77,7 +77,7 @@ if (localStorage.getItem("cityList")) {
                   var newTemp = $("<div>").addClass("text-black newtemp");
                   var newHumid = $("<div>").addClass("text-black newhumid");
                   iconIndex = response.list[i].weather[0].icon;
-                  iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
+                  iconURL = "https://openweathermap.org/img/w/" + iconIndex + ".png";
                   newIcon = $("<img>").addClass("").attr('src', iconURL);
                   newDate.html(moment().add((i+1), 'days').format('L'));
                   $(".fiveDayForecast").append(newDate);
@@ -109,7 +109,7 @@ $(".buttons").on("click","li", function(){
           console.log(response); // Log the resulting object
             $(".city").html("<h2>" + response.name + " " + moment().format('L') + "</h2>");
             var iconIndex = response.weather[0].icon;
-            var iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
+            var iconURL = "https://openweathermap.org/img/w/" + iconIndex + ".png";
             var iconDiv = $("<img>").attr('src', iconURL);
             var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + newCityButtonText + "&apikey=" + APIKey;
             $(".city").append(iconDiv);
@@ -122,7 +122,7 @@ $(".buttons").on("click","li", function(){
             console.log("Temperature (F): " + response.main.temp);
             var lon = response.coord.lon;
             var lat = response.coord.lat;
-    var uvIndex = "http://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&apikey=" + APIKey;
+    var uvIndex = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&apikey=" + APIKey;
     $.ajax({
       url: uvIndex,
       method: "GET"
@@ -154,7 +154,7 @@ $(".buttons").on("click","li", function(){
                   var newTemp = $("<div>").addClass("text-black newtemp");
                   var newHumid = $("<div>").addClass("text-black newhumid");
                   iconIndex = response.list[i].weather[0].icon;
-                  iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
+                  iconURL = "https://openweathermap.org/img/w/" + iconIndex + ".png";
                   newIcon = $("<img>").addClass("").attr('src', iconURL);
                   newDate.html(moment().add((i+1), 'days').format('L'));
                   
