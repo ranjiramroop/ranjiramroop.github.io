@@ -71,10 +71,10 @@ if (localStorage.getItem("cityList")) {
                 console.log($(".fiveDayForecast"));
                 console.log(forecastWeek);
                 for (var i = 0; i < 5; i++) {
-                  var newDate = $("<div>").addClass("text-black").attr("id", i);
-                  var newIcon = $("<div>").addClass("row" +[i]);
-                  var newTemp = $("<div>").addClass("text-black");
-                  var newHumid = $("<div>").addClass("text-black");
+                  var newDate = $("<div>").addClass("newdate").attr("id", i);
+                  var newIcon = $("<div>").addClass("row new icon" +[i]);
+                  var newTemp = $("<div>").addClass("text-black newtemp");
+                  var newHumid = $("<div>").addClass("text-black newhumid");
                   iconIndex = response.list[i].weather[0].icon;
                   iconURL = "http://openweathermap.org/img/w/" + iconIndex + ".png";
                   iconDiv = $("<img>").addClass("").attr('src', iconURL);

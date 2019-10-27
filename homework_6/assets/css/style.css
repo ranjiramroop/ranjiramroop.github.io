@@ -15,3 +15,20 @@ h1 {
 .fas {
     cursor: pointer;
 }
+.newdate {
+    background-color: lightskyblue;
+    color: darkslategrey;
+    border: solid, darkblue 2px;
+    padding: 4px;
+    margin: 10px;
+
+}
+/* .newicon {
+
+}
+.newtemp{
+
+}
+.newhumid{
+
+} */
