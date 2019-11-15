@@ -43,4 +43,17 @@ function promptUser() {
       }
     ]);
   }
-  promptUser;
+
+  promptUser()
+    .then(function(answers){
+      console
+      const html = generateHTML(answers);
+
+      return writeFileAsync("index.html", html);
+    })
+    .then(function(){
+      console.log("Successfully wrote to index.html");
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
