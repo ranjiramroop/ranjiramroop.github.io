@@ -2,19 +2,20 @@
 const inquirer = require("inquirer");
 const util = require("util");
 const fs = require("fs");
+const writeFileAsync = util.promisify(fs.writeFile);
+
+convertFactory = require('electron-html-to');
 const conversion = convertFactory({
   converterPath: convertFactory.converters.PDF
 });
-convertFactory = require('electron-html-to');
-const writeFileAsync = util.promisify(fs.writeFile);
-
+const electron = require('electron');
 conversion({ html: '<h1>Hello World</h1>' }, function(err, result) {
   if (err) {
     return console.error(err);
   }
   console.log(result.numberOfPages);
   console.log(result.logs);
-  result.stream.pipe(fs.createWriteStream('/path/to/anywhere.pdf'));
+  result.stream.pipe(fs.createWriteStream('profile.pdf'));
   conversion.kill(); // necessary in the electron-server strategy, see below for details
 });
 
@@ -27,30 +28,19 @@ function promptUser() {
       },
       {
         type: "input",
-        name: "location",
-        message: "Where are you from?"
-      },
-      {
-        type: "input",
-        name: "hobby",
-        message: "What is your favorite hobby?"
-      },
-      {
-        type: "input",
-        name: "food",
-        message: "What is your favorite food?"
-      },
-      {
-        type: "input",
         name: "github",
-        message: "Enter your GitHub Username"
+        message: "What is your Github username?"
       },
       {
         type: "input",
-        name: "linkedin",
-        message: "Enter your LinkedIn URL."
+        name: "color",
+        message: "What is your favorite color?"
+      },
+      {
+        type: "input",
+        name: "location",
+        message: "Where do your reside?"
       }
     ]);
   }
   promptUser;
-  
