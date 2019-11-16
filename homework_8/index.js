@@ -46,7 +46,7 @@ function promptUser() {
 
   promptUser()
     .then(function(answers){
-      console
+      console.log(answers);
       const html = generateHTML(answers);
 
       return writeFileAsync("index.html", html);
