@@ -1,52 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script
+      src="https://kit.fontawesome.com/d5da0e9812.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <title>GITHUB Profile Generator</title>
-</head>
+  </head>
 
-<body>
-    <div class = "bs-container">
-        <div class = "row justify-content-md-center">
-            <div class = "col-md-12 text-center"> <!--SWITCH TO JUMBOTRON-->
-                <div class = "card">
-                    <h1> Hi! My name is ${answers.name}!</h1>
-                </div>
-            </div>
+  <body>
+    <div class="bs-container">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4" style="text-align:center;">
+            Hi! <br />
+            My name is ${answers.name}!
+          </h1>
+          <h4 style="text-align:center;">
+            <i class="fas fa-location-arrow"></i
+            ><span class="badge badge-secondary">${answers.location}</span>
+
+            <i class="fab fa-github"></i>
+            <span class="badge badge-secondary">${answers.github}</span>
+          </h4>
+          <ul class="list-group">
+            <li class="list-group-item">My GitHub username is githubuser</li>
+            <li class="list-group-item">LinkedIn: linkedin.com/awesome</li>
+          </ul>
         </div>
-        <div class = "row justify-content-md-center">
-            <div class = "col-md-12 text-center">
-                <h2> I build things and teach people to code.</h2>
-            </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-12 text-center">
+          <!--SWITCH TO JUMBOTRON-->
+          <div class="card">
+            <!-- <h1> Hi! My name is ${answers.name}!</h1> -->
+          </div>
         </div>
-        <div class = "row">
-            <div class = "col-md-5">
-                <div class="card">
-                    <h2> Public Repositories: </h2>
-                </div>
-            </div>
-            <div class = "col-md-5">
-                <div class="card">
-                    <h2> Followers: </h2>
-                </div>
-            </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-12 text-center">
+          <h2>I build things and teach people to code.</h2>
         </div>
-        <div class = "row">
-                <div class = "col-md-5">
-                    <div class="card">
-                        <h2> GitHub Stars: </h2>
-                    </div>
-                </div>
-                <div class = "col-md-5">
-                    <div class="card">
-                        <h2> Following: </h2>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="card">
+            <h2>Public Repositories:</h2>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="card">
+            <h2>Followers:</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="card">
+            <h2>GitHub Stars:</h2>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="card">
+            <h2>Following:</h2>
+          </div>
+        </div>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
