@@ -46,7 +46,7 @@ async function getStars(answers) {
 function generateHTML(answers, gitInfo, stars) {
   return `
   <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -70,9 +70,14 @@ function generateHTML(answers, gitInfo, stars) {
         class="jumbotron jumbotron-fluid"
         style="background-color: ${answers.color}; max-width: 600px;"
       >
-        <div class="wrapper" style="max-width: 600px;" >
-          <div class="wrapper">
-            <img src="${gitInfo.data.avatar_url}" style="width: 180px; height: auto; align: center;"/>
+        <div class="wrapper" style="max-width: 600px;">
+          <div class="row justify-content-md-center" style="padding: 1%;">
+            <div class="col-sm-12 d-flex justify-content-md-center">
+              <img
+                src="${gitInfo.data.avatar_url}"
+                style="width: 180px; height: auto; center-block;"
+              />
+            </div>
           </div>
           <h1 class="display-4" style="text-align:center;">
             Hi! <br />
