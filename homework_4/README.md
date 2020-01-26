@@ -14,8 +14,7 @@ This application was built with VS Code, HTML, CSS Bootstrap, and Javascript.
 ### Motivation
 This was a fun application to build. One of my favorite questions, "Pumba, from Disney's The Lion King movie, is what type of animal?" had a multiple choice option as "Dinner".
 
-![Image of Pumba question]
-/Users/ranjiramroop/Desktop/my_repo/ranjiramroop.github.io/homework_4/assets/image/pumbaQuestion.png
+![Image of Pumba question](/Users/ranjiramroop/Desktop/my_repo/ranjiramroop.github.io/homework_4/assets/image/pumbaQuestion.png)
 
 Have fun with The Animal Quiz, and leave a comment or suggestion for another quiz for me to create!
 
