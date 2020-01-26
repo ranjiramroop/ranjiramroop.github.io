@@ -1,85 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- Added link to the jQuery Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Added a link to Bootstrap-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link bootstrap.css rel="stylesheet" href="assets/css/bootstrap.css">
-  <title>The Animal Quiz</title>
-</head>
-<body>
-  <div class="container">
-  <!-- How to use storage to build list items for the high score? use activities 4.2 solved 19-stu -->
-  <div class="row">
-    <div class="col-md-6">
-      <div class="score">
-        <a class=high-score> High Scores </a>
-          <ol>
-            link to stored list items here ...
-          </ol>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div id="timerContainer">
-        <div id="timer"></div>
-          <div class="startTimer reset" onclick="startTimer()" >
-                <i class="fas fa-play"></i>
-              </div>
-            <div class="pauseTimer reset" onclick="pauseTimer()" >
-                <i class="fas fa-pause"></i>
-              </div>
-            <div class="resetTimer reset" onclick="resetTimer()"></div>
-            </div>
-    </div>
-  </div>
-  
-<!-- On click for the start button is going to hide the current div and unhide the question div
-the on click will also double down on the timer and start the timer countdown. I will be creating a function for the button displayed on the first screen
- -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added a link to Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link bootstrap.css rel="stylesheet" href="assets/css/bootstrap.css" />
+    <title>The Animal Quiz</title>
+  </head>
 
-    <div class="jumbotron">
-      <div class="startQuiz" id="visible">
-        <h1 class="text-center">Click Below to Start the Animal Quiz!</h1>
-        <p class="lead">How do you think you stack up when it comes to your animal kingdom knowledge?</p>
-          <a class="btn btn-primary btn-lg" id= "startQuiz" href="#" role="button">Start Quiz</a>
-        </p>
-      </div>
-      <div id="quiz" class="hide">
-        <h1>Animal Quiz</h1>
-        <p id="question"></p>
-        <div class="buttons">
-          <button id="btn0">
-            <span id="choice0"></span>
-          </button>
-          <button id="btn1">
-            <span id="choice1"></span>
-          </button>
-          <button id="btn2">
-            <span id="choice2"></span>
-          </button>
-          <button id="btn3">
-              <span id="choice3"></span>
-          </button>
+  <body>
+    <header>
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="quizHead">
+            The Animal Quiz
+          </h1>
         </div>
-          <p id="progress"></p>
-        </div>
-    </div> <!-- jumbotron ending div -->
-
-  </div> <!-- container ending div -->
-
-  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-md-12">
-            <small>Copyright &copy; Ranji Ramroop</small>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="timerContainer">
+            Timer: 0
           </div>
         </div>
       </div>
-    </footer>
-  <script src="assets/js/script.js"></script>
-</body>
+    </header>
+
+    <div class="wrapper">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="quizTitle">Animal Quiz!</h2>
+          <h5 class="intro">
+            How do you think you stack up when it comes to your animal kingdom
+            knowledge?
+          </h5>
+        </div>
+      </div>
+
+      <!--List of saved Highscores-->
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="users"></ul>
+        </div>
+      </div>
+
+      <!--"Go Back" button brings you back to the start and the "Clear Scores" button clears all highscores-->
+      <div class="row">
+        <div class="col-md-6">
+          <button class="start-over" onClick="window.location.reload();">
+            Go Back
+          </button>
+        </div>
+
+        <div class="col-md-6">
+          <button class="clear">Clear Scores</button>
+        </div>
+      </div>
+
+      <!--Form to enter and submit your initials and score-->
+      <div class="row">
+        <div class="col-md-12">
+          <form class="enter-score">
+            Initials:<input type="text" class="initials" />
+            <input type="button" class="record" value="Submit" />
+          </form>
+        </div>
+      </div>
+
+      <!--Multiple choice buttons-->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <button id="ques1" class="op remove"></button>
+            <button id="ques2" class="op remove"></button>
+            <button id="ques3" class="op remove"></button>
+            <button id="ques4" class="op remove"></button>
+            <!--Start Quiz button-->
+            <button id="startQuiz">Start Quiz</button>
+          </div>
+        </div>
+      </div>
+
+      <!--The result of your selection "correct" or "incorrect"-->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>Copyright Ranji Ramroop &copy;</footer>
+
+    <!--Linking javaScript files-->
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
+  </body>
 </html>
