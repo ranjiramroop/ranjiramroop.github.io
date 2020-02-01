@@ -33,7 +33,8 @@ var deleteNote = function(id) {
 // shows the textEntry, or will show the option to create a new note
 var rendertextEntry = function() {
   $saveNoteBtn.hide();
-  if (textEntry.id) {
+  console.log(textEntry);
+  if (textEntry.text) {
     $noteTitle.attr("readonly", true);
     $noteText.attr("readonly", true);
     $noteTitle.val(textEntry.title);
@@ -61,9 +62,10 @@ var handleNoteSave = function() {
 // Delete the clicked note
 var handleNoteDelete = function(event) {
   event.stopPropagation();
-  var note = $(this)
+  var index = $(this)
     .parent(".list-group-item")
-    .data();
+    .data("index");
+  var note = notes[index];
   if (textEntry.id === note.id) {
     textEntry = {};
   }
@@ -74,7 +76,10 @@ var handleNoteDelete = function(event) {
 
 // textEntry display
 var handleNoteView = function() {
-  textEntry = $(this).data();
+  var index = parseInt($(this).attr("data-index"));
+  console.log(index);
+  textEntry = notes[index];
+  console.log(textEntry);
   rendertextEntry();
 };
 
@@ -93,13 +98,15 @@ var handleRenderSaveBtn = function() {
   }
 };
 
+var notes;
+
 // The sidebar will create a list using the note titles
-var renderNoteList = function(notes) {
+var renderNoteList = function() {
   $noteList.empty();
   var noteListItems = [];
   for (var i = 0; i < notes.length; i++) {
     var note = notes[i];
-    var $li = $("<li class='list-group-item'>").data(note);
+    var $li = $("<li class='list-group-item'>").attr("data-index", i);
     var $span = $("<span>").text(note.title);
     var $delBtn = $(
       "<i class='fas fa-trash-alt float-right text-danger delete-note'>"
@@ -113,7 +120,8 @@ var renderNoteList = function(notes) {
 // Gets notes from the db and renders them to the sidebar
 var getAndRenderNotes = function() {
   return savedNotes().then(function(data) {
-    renderNoteList(data);
+    notes = data;
+    renderNoteList();
   });
 };
 
